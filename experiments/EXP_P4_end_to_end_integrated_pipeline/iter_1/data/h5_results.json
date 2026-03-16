@@ -1,0 +1,45 @@
+{
+  "bootstrap_ci": [
+    {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "scheme": "learned_maxmin",
+      "top_rank_frequency": 0.0
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "scheme": "fixed_historical",
+      "top_rank_frequency": 0.0
+    },
+    {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "scheme": "equal_weight",
+      "top_rank_frequency": 0.0
+    }
+  ],
+  "bootstrap_top_rank_frequency": 0.0,
+  "c1_floor": 0.01,
+  "c2_floor": 15,
+  "duration_sec": 0.09430095902644098,
+  "equal_regret_margin": -0.48957539533818484,
+  "historical_regret_margin": -0.4192957324265179,
+  "holdout_fdp": 0.02770815944133904,
+  "learned_weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "reliability_floor_violation_rate": 1.0,
+  "sign_identified_effect_count": 49,
+  "theorem5_conic_impossibility": true,
+  "theorem5_witness": {
+    "alpha_1": 0.1,
+    "alpha_2": 1.9,
+    "baseline_1": "P1_regime_first_inference_core",
+    "baseline_2": "P3_partial_identification_robustness"
+  },
+  "worst_case_regret_margin": -0.48957539533818484
+}

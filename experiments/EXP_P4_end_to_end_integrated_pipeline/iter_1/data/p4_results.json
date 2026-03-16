@@ -1,0 +1,16 @@
+{
+  "baseline_scores": {
+    "P1_regime_first_inference_core": 0.12,
+    "P2_replication_constrained_fdr": 0.71875,
+    "P3_partial_identification_robustness": 0.8,
+    "global_null_screen_only": 0.25,
+    "unconstrained_end_to_end_predictive_pipeline": 0.15129958323983156
+  },
+  "composite_reproducibility_score": 0.531926583314633,
+  "duration_sec": 0.0005783339729532599,
+  "h4_stage_a_non_inferiority_pass": true,
+  "h4_stage_b_superiority_pass": false,
+  "h5_theorem5_conic_impossibility": true,
+  "h5_worst_case_regret_margin": -0.48957539533818484,
+  "wins_all_baselines": false
+}

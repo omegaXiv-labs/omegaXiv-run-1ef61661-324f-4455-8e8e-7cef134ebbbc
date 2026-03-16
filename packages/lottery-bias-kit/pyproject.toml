@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omegaxiv-lottery-bias-kit"
+version = "0.1.0"
+description = "Reusable lottery bias detection library extracted from omegaXiv validation methodology"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24,<3",
+  "pandas>=2.0,<3",
+  "sympy>=1.12,<2"
+]
+
+[project.optional-dependencies]
+plot = [
+  "matplotlib>=3.8,<4",
+  "seaborn>=0.13,<1"
+]
+dev = [
+  "pytest>=8,<9",
+  "ruff>=0.4,<1",
+  "mypy>=1.10,<2"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

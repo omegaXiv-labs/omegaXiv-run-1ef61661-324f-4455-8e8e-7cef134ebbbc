@@ -1,0 +1,284 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[arcetri contributors(2025)]{S38}
+arcetri contributors.
+\newblock arcetri/sts: Improved nist statistical test suite, 2025.
+\newblock URL \url{https://github.com/arcetri/sts}.
+\newblock GitHub Repository.
+
+\bibitem[Association(2026)]{S34}
+Multi-State~Lottery Association.
+\newblock Powerball official game documentation and result publications, 2026.
+\newblock URL \url{https://www.powerball.com/}.
+\newblock Official Game Website.
+
+\bibitem[Bai \& Perron(1998)Bai and Perron]{S10}
+J.~Bai and P.~Perron.
+\newblock Estimating and testing linear models with multiple structural
+  changes.
+\newblock \emph{Econometrica}, 1998.
+\newblock \doi{10.2307/2998540}.
+\newblock URL \url{https://doi.org/10.2307/2998540}.
+
+\bibitem[Bai \& Perron(2003)Bai and Perron]{S11}
+J.~Bai and P.~Perron.
+\newblock Computation and analysis of multiple structural change models.
+\newblock \emph{Journal of Applied Econometrics}, 2003.
+\newblock \doi{10.1002/jae.659}.
+\newblock URL \url{https://doi.org/10.1002/jae.659}.
+
+\bibitem[Bassham et~al.(2010)Bassham, Rukhin, Soto, and et~al.]{S20}
+L.~E. Bassham, A.~Rukhin, J.~Soto, and et~al.
+\newblock A statistical test suite for random and pseudorandom number
+  generators for cryptographic applications.
+\newblock \emph{NIST SP 800-22 Rev.1a}, 2010.
+\newblock \doi{10.6028/NIST.SP.800-22r1a}.
+\newblock URL \url{https://doi.org/10.6028/NIST.SP.800-22r1a}.
+
+\bibitem[Benjamini \& Hochberg(1995)Benjamini and Hochberg]{S15}
+Y.~Benjamini and Y.~Hochberg.
+\newblock Controlling the false discovery rate: A practical and powerful
+  approach to multiple testing.
+\newblock \emph{JRSS Series B}, 1995.
+\newblock URL \url{https://www.jstor.org/stable/2346101}.
+
+\bibitem[Benjamini \& Yekutieli(2001)Benjamini and Yekutieli]{S16}
+Y.~Benjamini and D.~Yekutieli.
+\newblock The control of the false discovery rate in multiple testing under
+  dependency.
+\newblock \emph{Annals of Statistics}, 2001.
+\newblock \doi{10.1214/aos/1013699998}.
+\newblock URL \url{https://doi.org/10.1214/aos/1013699998}.
+
+\bibitem[Box \& Pierce(1970)Box and Pierce]{S06}
+G.~E.~P. Box and D.~A. Pierce.
+\newblock Distribution of residual autocorrelations in
+  autoregressive-integrated moving average time series models.
+\newblock \emph{Journal of the American Statistical Association}, 1970.
+\newblock \doi{10.1080/01621459.1970.10481180}.
+\newblock URL \url{https://doi.org/10.1080/01621459.1970.10481180}.
+
+\bibitem[Brock et~al.(1996)Brock, Dechert, Scheinkman, and LeBaron]{S07}
+W.~A. Brock, W.~D. Dechert, J.~A. Scheinkman, and B.~LeBaron.
+\newblock A test for independence based on the correlation dimension.
+\newblock \emph{Econometric Reviews}, 1996.
+\newblock \doi{10.1080/07474939608800353}.
+\newblock URL \url{https://doi.org/10.1080/07474939608800353}.
+
+\bibitem[Brown et~al.(1975)Brown, Durbin, and Evans]{S09}
+R.~L. Brown, J.~Durbin, and J.~M. Evans.
+\newblock Techniques for testing the constancy of regression relationships over
+  time.
+\newblock \emph{Journal of the Royal Statistical Society, Series B}, 1975.
+\newblock URL \url{https://www.jstor.org/stable/2984889}.
+
+\bibitem[Commission(2025)]{S32}
+UK~Gambling Commission.
+\newblock Gambling commission annual report and accounts 2024 to 2025, 2025.
+\newblock URL
+  \url{https://www.gov.uk/government/publications/gambling-commission-annual-report-and-accounts-2024-to-2025}.
+\newblock GOV.UK Corporate Report.
+
+\bibitem[Dai et~al.(2023)Dai, Lin, Xing, and Liu]{S25}
+C.~Dai, B.~Lin, X.~Xing, and J.~S. Liu.
+\newblock A scale-free approach for false discovery rate control in generalized
+  linear models.
+\newblock \emph{JASA}, 2023.
+\newblock \doi{10.1080/01621459.2023.2165930}.
+\newblock URL \url{https://doi.org/10.1080/01621459.2023.2165930}.
+
+\bibitem[Dickey \& Fuller(1979)Dickey and Fuller]{S01}
+D.~A. Dickey and W.~A. Fuller.
+\newblock Distribution of the estimators for autoregressive time series with a
+  unit root.
+\newblock \emph{Journal of the American Statistical Association}, 1979.
+\newblock \doi{10.1080/01621459.1979.10482531}.
+\newblock URL \url{https://doi.org/10.1080/01621459.1979.10482531}.
+
+\bibitem[Efron(2004)]{S19}
+B.~Efron.
+\newblock Large-scale simultaneous hypothesis testing: The choice of a null
+  hypothesis.
+\newblock \emph{JASA}, 2004.
+\newblock \doi{10.1198/016214504000000089}.
+\newblock URL \url{https://doi.org/10.1198/016214504000000089}.
+
+\bibitem[Foreman et~al.(2024)Foreman, Yeung, and Curchod]{S24}
+C.~Foreman, R.~Yeung, and F.~J. Curchod.
+\newblock Statistical testing of random number generators and their improvement
+  using randomness extraction.
+\newblock \emph{Entropy}, 2024.
+\newblock \doi{10.3390/e26121053}.
+\newblock URL \url{https://doi.org/10.3390/e26121053}.
+
+\bibitem[Haile et~al.(2024)Haile, Tian, AlNemer, and Tian]{S27}
+T.~T. Haile, F.~Tian, G.~AlNemer, and B.~Tian.
+\newblock Multiscale change point detection for univariate time series data
+  with missing value.
+\newblock \emph{Mathematics}, 2024.
+\newblock \doi{10.3390/math12203189}.
+\newblock URL \url{https://doi.org/10.3390/math12203189}.
+
+\bibitem[International(2024)]{S33}
+Allwyn International.
+\newblock Allwyn 2024 annual report and accounts, 2024.
+\newblock URL \url{https://www.allwyn.com/report/2024}.
+\newblock Corporate Annual Report.
+
+\bibitem[Killick \& Eckley(2014)Killick and Eckley]{S13}
+R.~Killick and I.~A. Eckley.
+\newblock changepoint: An r package for changepoint analysis.
+\newblock \emph{Journal of Statistical Software}, 2014.
+\newblock \doi{10.18637/jss.v058.i03}.
+\newblock URL \url{https://doi.org/10.18637/jss.v058.i03}.
+
+\bibitem[Killick et~al.(2012)Killick, Fearnhead, and Eckley]{S12}
+R.~Killick, P.~Fearnhead, and I.~A. Eckley.
+\newblock Optimal detection of changepoints with a linear computational cost.
+\newblock \emph{Journal of the American Statistical Association}, 2012.
+\newblock \doi{10.1080/01621459.2012.737745}.
+\newblock URL \url{https://doi.org/10.1080/01621459.2012.737745}.
+
+\bibitem[Kwiatkowski et~al.(1992)Kwiatkowski, Phillips, Schmidt, and Shin]{S03}
+D.~Kwiatkowski, P.~C.~B. Phillips, P.~Schmidt, and Y.~Shin.
+\newblock Testing the null hypothesis of stationarity against the alternative
+  of a unit root.
+\newblock \emph{Journal of Econometrics}, 1992.
+\newblock \doi{10.1016/0304-4076(92)90104-Y}.
+\newblock URL \url{https://doi.org/10.1016/0304-4076(92)90104-Y}.
+
+\bibitem[L'Ecuyer \& Simard(2007)L'Ecuyer and Simard]{S21}
+P.~L'Ecuyer and R.~Simard.
+\newblock Testu01: A c library for empirical testing of random number
+  generators.
+\newblock \emph{ACM TOMACS}, 2007.
+\newblock \doi{10.1145/1268776.1268777}.
+\newblock URL \url{https://doi.org/10.1145/1268776.1268777}.
+
+\bibitem[Ljung \& Box(1978)Ljung and Box]{S05}
+G.~M. Ljung and G.~E.~P. Box.
+\newblock On a measure of lack of fit in time series models.
+\newblock \emph{Biometrika}, 1978.
+\newblock \doi{10.1093/biomet/65.2.297}.
+\newblock URL \url{https://doi.org/10.1093/biomet/65.2.297}.
+
+\bibitem[LOTTO.de(2026)]{S35}
+LOTTO.de.
+\newblock Lotto 6aus49 spielregeln, 2026.
+\newblock URL \url{https://www.lotto.de/lotto-6aus49/spielregeln}.
+\newblock Official Rules Page.
+
+\bibitem[Marsaglia(1968)]{S23}
+G.~Marsaglia.
+\newblock Random numbers fall mainly in the planes.
+\newblock \emph{PNAS}, 1968.
+\newblock \doi{10.1073/pnas.61.1.25}.
+\newblock URL \url{https://doi.org/10.1073/pnas.61.1.25}.
+
+\bibitem[Matsumoto \& Nishimura(1998)Matsumoto and Nishimura]{S22}
+M.~Matsumoto and T.~Nishimura.
+\newblock Mersenne twister: A 623-dimensionally equidistributed uniform
+  pseudorandom number generator.
+\newblock \emph{ACM TOMACS}, 1998.
+\newblock \doi{10.1145/272991.272995}.
+\newblock URL \url{https://doi.org/10.1145/272991.272995}.
+
+\bibitem[Page(1954)]{S08}
+E.~S. Page.
+\newblock Continuous inspection schemes.
+\newblock \emph{Biometrika}, 1954.
+\newblock \doi{10.1093/biomet/41.1-2.100}.
+\newblock URL \url{https://doi.org/10.1093/biomet/41.1-2.100}.
+
+\bibitem[Park \& Park(2023)Park and Park]{S26}
+H.~Park and J.~Park.
+\newblock A robust false discovery rate controlling procedure using the
+  empirical likelihood with a fast algorithm.
+\newblock \emph{Journal of Statistical Computation and Simulation}, 2023.
+\newblock \doi{10.1080/00949655.2023.2280916}.
+\newblock URL \url{https://doi.org/10.1080/00949655.2023.2280916}.
+
+\bibitem[Phillips \& Perron(1988)Phillips and Perron]{S04}
+P.~C.~B. Phillips and P.~Perron.
+\newblock Testing for a unit root in time series regression.
+\newblock \emph{Biometrika}, 1988.
+\newblock \doi{10.1093/biomet/75.2.335}.
+\newblock URL \url{https://doi.org/10.1093/biomet/75.2.335}.
+
+\bibitem[provided~compiled records(2026)]{S39}
+User provided~compiled records.
+\newblock Historical lotto draws dataset (1986-2026) user-provided attachment,
+  2026.
+\newblock URL \url{resource://resources/lotto\_draws\_1986\_2026.txt}.
+\newblock Workspace resource.
+
+\bibitem[Said \& Dickey(1984)Said and Dickey]{S02}
+S.~E. Said and D.~A. Dickey.
+\newblock Testing for unit roots in autoregressive-moving average models of
+  unknown order.
+\newblock \emph{Biometrika}, 1984.
+\newblock \doi{10.1093/biomet/71.3.599}.
+\newblock URL \url{https://doi.org/10.1093/biomet/71.3.599}.
+
+\bibitem[Si et~al.(2024)Si, Wang, Zhang, Richmond, Ahn, and Gong]{S28}
+T.~Si, Y.~Wang, L.~Zhang, E.~Richmond, T.-H. Ahn, and H.~Gong.
+\newblock Multivariate time series change-point detection with a novel
+  pearson-like scaled bregman divergence.
+\newblock \emph{Stats}, 2024.
+\newblock \doi{10.3390/stats7020028}.
+\newblock URL \url{https://doi.org/10.3390/stats7020028}.
+
+\bibitem[Storey(2002)]{S17}
+J.~D. Storey.
+\newblock A direct approach to false discovery rates.
+\newblock \emph{JRSS Series B}, 2002.
+\newblock \doi{10.1111/1467-9868.00346}.
+\newblock URL \url{https://doi.org/10.1111/1467-9868.00346}.
+
+\bibitem[Storey \& Tibshirani(2003)Storey and Tibshirani]{S18}
+J.~D. Storey and R.~Tibshirani.
+\newblock Statistical significance for genomewide studies.
+\newblock \emph{PNAS}, 2003.
+\newblock \doi{10.1073/pnas.1530509100}.
+\newblock URL \url{https://doi.org/10.1073/pnas.1530509100}.
+
+\bibitem[Truong \& contributors(2026)Truong and contributors]{S37}
+C.~Truong and contributors.
+\newblock ruptures: change point detection in python, 2026.
+\newblock URL \url{https://github.com/deepcharles/ruptures}.
+\newblock GitHub Repository.
+
+\bibitem[Truong et~al.(2020)Truong, Oudre, and Vayatis]{S14}
+C.~Truong, L.~Oudre, and N.~Vayatis.
+\newblock Selective review of offline change point detection methods.
+\newblock \emph{Signal Processing}, 2020.
+\newblock \doi{10.1016/j.sigpro.2019.107299}.
+\newblock URL \url{https://doi.org/10.1016/j.sigpro.2019.107299}.
+
+\bibitem[Tse(2024)]{S30}
+K.-K. Tse.
+\newblock Lottery numbers and ordered statistics.
+\newblock \emph{Applied Mathematics}, 2024.
+\newblock \doi{10.4236/am.2024.154017}.
+\newblock URL \url{https://doi.org/10.4236/am.2024.154017}.
+
+\bibitem[(UK)(2025)]{S36}
+The National~Lottery (UK).
+\newblock The national lottery lotto draw details (example draw records), 2025.
+\newblock URL
+  \url{https://www.national-lottery.co.uk/results/lotto/draw-history/draw-details/3085}.
+\newblock Official Draw History.
+
+\bibitem[Ungar(2025)]{S29}
+K.~Ungar.
+\newblock Investigating randomness and fairness in the romanian 6/49 lottery.
+\newblock \emph{Revista Economica}, 2025.
+\newblock \doi{10.56043/reveco-2025-0002}.
+\newblock URL \url{https://doi.org/10.56043/reveco-2025-0002}.
+
+\end{thebibliography}

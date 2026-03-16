@@ -1,0 +1,108 @@
+{
+  "handle": "lottery-bias-kit",
+  "distribution_name": "omegaxiv-lottery-bias-kit",
+  "import_name": "lottery_bias_kit",
+  "version": "0.1.0",
+  "package_type": "library",
+  "handle_confirmed": true,
+  "summary": "Reusable lottery-bias library exposing staged H1-H5 analysis and integrated P4 scoring from the validated omegaXiv methodology.",
+  "registry": {
+    "index_path": "packages/registry/index.json",
+    "record_path": "packages/registry/lottery-bias-kit.json"
+  },
+  "paths": {
+    "readme": "packages/lottery-bias-kit/README.md",
+    "requirements": "packages/lottery-bias-kit/requirements.txt",
+    "dependency_graph": "packages/lottery-bias-kit/dependency_graph.json",
+    "pyproject": "packages/lottery-bias-kit/pyproject.toml"
+  },
+  "install": {
+    "canonical": [
+      "pip install omegaxiv",
+      "ox install lottery-bias-kit==0.1.0"
+    ],
+    "install_target": "packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl",
+    "smoke_test_command": "SMOKE_DIR=/tmp/ox_smoke_lottery_bias_kit_$(date +%s) && python3 -m venv \"$SMOKE_DIR\" && \"$SMOKE_DIR\"/bin/python -m pip install packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl && \"$SMOKE_DIR\"/bin/python -c \"from lottery_bias_kit import LotteryBiasAnalyzer; print(LotteryBiasAnalyzer.__name__)\""
+  },
+  "extraction_plan": {
+    "core_contributions": [
+      "Regime segmentation and changepoint-consensus inference under calibrated penalties (H1/C1).",
+      "Replication-constrained false-discovery control over descriptor prefixes with isotonic fallback handling (H2/C2).",
+      "Bounded-confounding sign identification with theorem-aligned mismatch diagnostics (H3/C3).",
+      "Staged fused-transfer evaluation with non-inferiority/superiority gates and transport diagnostics (H4/C4).",
+      "Reliability-constrained max-min recalibration and conic-impossibility diagnostics for integrated ranking (H5/C5)."
+    ],
+    "source_symbols": [
+      {
+        "source_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/src/lottery_validation/analysis.py",
+        "symbols": [
+          "run_h1_segmentation",
+          "run_h2_fdr",
+          "run_h3_identification",
+          "run_h4_transfer",
+          "run_h5_recalibration",
+          "run_p4_integrated"
+        ]
+      },
+      {
+        "source_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/src/lottery_validation/core.py",
+        "symbols": [
+          "load_draws",
+          "add_descriptors",
+          "temporal_split",
+          "feasible_changepoints",
+          "assign_regime_ids"
+        ]
+      },
+      {
+        "source_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/src/lottery_validation/sympy_checks.py",
+        "symbols": [
+          "run_sympy_validation"
+        ]
+      }
+    ],
+    "public_api_mapping": [
+      {
+        "exported_module": "lottery_bias_kit.analysis",
+        "exported_symbol": "LotteryBiasAnalyzer",
+        "maps_from": [
+          "run_h1_segmentation",
+          "run_h2_fdr",
+          "run_h3_identification",
+          "run_h4_transfer",
+          "run_h5_recalibration",
+          "run_p4_integrated"
+        ]
+      },
+      {
+        "exported_module": "lottery_bias_kit.data",
+        "exported_symbol": "load_lottery_draws",
+        "maps_from": ["load_draws"]
+      },
+      {
+        "exported_module": "lottery_bias_kit.data",
+        "exported_symbol": "prepare_lottery_dataframe",
+        "maps_from": ["add_descriptors"]
+      },
+      {
+        "exported_module": "lottery_bias_kit.sympy_checks",
+        "exported_symbol": "compute_sympy_invariants",
+        "maps_from": ["run_sympy_validation"]
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "kind": "wheel",
+      "path": "packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl",
+      "sha256": "a0e2f0b33ba3506f87b72e67d2957446591b2a463b52c37f2218732faaf319a5",
+      "size_bytes": 14551
+    },
+    {
+      "kind": "archive",
+      "path": "packages/lottery-bias-kit/dist/lottery-bias-kit-0.1.0-source.tar.gz",
+      "sha256": "cd0395788e0c70d812ffc282b66e6e8a0b0d894eac1c2f3dac4ad7b18219bf36",
+      "size_bytes": 14567
+    }
+  ]
+}

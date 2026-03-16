@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "handles": [
+    {
+      "handle": "lottery-bias-kit",
+      "distribution_name": "omegaxiv-lottery-bias-kit",
+      "version": "0.1.0",
+      "record_path": "packages/registry/lottery-bias-kit.json"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+metric,value
+segmentation_objective_gap_to_best_candidate,27.56378806689463
+changepoint_consensus_rate,0.2
+false_changepoint_rate_on_iid_null,2.0
+holdout_replication_precision_lift_vs_pooled,0.004651162790697766

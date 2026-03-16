@@ -1,0 +1,96 @@
+{
+  "package": "omegaxiv-lottery-bias-kit",
+  "version": "0.1.0",
+  "nodes": [
+    {
+      "name": "numpy",
+      "spec": ">=1.24,<3",
+      "source": "runtime",
+      "transitive": false,
+      "required_by": ["omegaxiv-lottery-bias-kit"]
+    },
+    {
+      "name": "pandas",
+      "spec": ">=2.0,<3",
+      "source": "runtime",
+      "transitive": false,
+      "required_by": ["omegaxiv-lottery-bias-kit"]
+    },
+    {
+      "name": "sympy",
+      "spec": ">=1.12,<2",
+      "source": "runtime",
+      "transitive": false,
+      "required_by": ["omegaxiv-lottery-bias-kit"]
+    },
+    {
+      "name": "python-dateutil",
+      "spec": ">=2.8.2",
+      "source": "runtime",
+      "transitive": true,
+      "required_by": ["pandas"]
+    },
+    {
+      "name": "pytz",
+      "spec": ">=2020.1",
+      "source": "runtime",
+      "transitive": true,
+      "required_by": ["pandas"]
+    },
+    {
+      "name": "tzdata",
+      "spec": ">=2022.7",
+      "source": "runtime",
+      "transitive": true,
+      "required_by": ["pandas"]
+    },
+    {
+      "name": "mpmath",
+      "spec": ">=1.1.0,<1.4",
+      "source": "runtime",
+      "transitive": true,
+      "required_by": ["sympy"]
+    },
+    {
+      "name": "six",
+      "spec": ">=1.5",
+      "source": "runtime",
+      "transitive": true,
+      "required_by": ["python-dateutil"]
+    },
+    {
+      "name": "pytest",
+      "spec": ">=8,<9",
+      "source": "dev",
+      "transitive": false,
+      "required_by": ["omegaxiv-lottery-bias-kit[dev]"]
+    },
+    {
+      "name": "ruff",
+      "spec": ">=0.4,<1",
+      "source": "dev",
+      "transitive": false,
+      "required_by": ["omegaxiv-lottery-bias-kit[dev]"]
+    },
+    {
+      "name": "mypy",
+      "spec": ">=1.10,<2",
+      "source": "dev",
+      "transitive": false,
+      "required_by": ["omegaxiv-lottery-bias-kit[dev]"]
+    }
+  ],
+  "edges": [
+    {"from": "omegaxiv-lottery-bias-kit", "to": "numpy"},
+    {"from": "omegaxiv-lottery-bias-kit", "to": "pandas"},
+    {"from": "omegaxiv-lottery-bias-kit", "to": "sympy"},
+    {"from": "pandas", "to": "python-dateutil"},
+    {"from": "pandas", "to": "pytz"},
+    {"from": "pandas", "to": "tzdata"},
+    {"from": "python-dateutil", "to": "six"},
+    {"from": "sympy", "to": "mpmath"},
+    {"from": "omegaxiv-lottery-bias-kit[dev]", "to": "pytest"},
+    {"from": "omegaxiv-lottery-bias-kit[dev]", "to": "ruff"},
+    {"from": "omegaxiv-lottery-bias-kit[dev]", "to": "mypy"}
+  ]
+}

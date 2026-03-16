@@ -1,0 +1,191 @@
+{
+  "best_brier": 0.1667131181663359,
+  "best_eta": 0.0,
+  "best_lambda": 0.05,
+  "brier_lift_vs_pooled": 0.0012995832398315782,
+  "duration_sec": 0.9831845840089954,
+  "eta0_boundary_delta": 0.0,
+  "pooled_brier": 0.16693005767150992,
+  "rows": [
+    {
+      "auc_roc": 1.0,
+      "brier": 0.17297375948049498,
+      "calibration_intercept": 0.17035560641986552,
+      "calibration_slope": 0.16707805324158057,
+      "eta_fused": 0.0,
+      "kkt_residual": 0.5709180060937681,
+      "lambda_l1": 0.001,
+      "log_loss": 0.48876991009532156,
+      "primal_dual_gap": 0.032962727099259376
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.16991796035150872,
+      "calibration_intercept": 0.16970402097092688,
+      "calibration_slope": 0.17968157872628135,
+      "eta_fused": 0.05,
+      "kkt_residual": 0.5625561793437827,
+      "lambda_l1": 0.001,
+      "log_loss": 0.4816770432507154,
+      "primal_dual_gap": 0.033205760707947576
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.17003066343680467,
+      "calibration_intercept": 0.16956006732683365,
+      "calibration_slope": 0.17978575891164458,
+      "eta_fused": 0.1,
+      "kkt_residual": 0.5620951155605128,
+      "lambda_l1": 0.001,
+      "log_loss": 0.4817583323434912,
+      "primal_dual_gap": 0.03322127742227933
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.17003066343680467,
+      "calibration_intercept": 0.16956006732683365,
+      "calibration_slope": 0.17978575891164458,
+      "eta_fused": 0.2,
+      "kkt_residual": 0.5620951155605128,
+      "lambda_l1": 0.001,
+      "log_loss": 0.4817583323434912,
+      "primal_dual_gap": 0.03322127742227933
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.1715952985646993,
+      "calibration_intercept": 0.17026191826271528,
+      "calibration_slope": 0.1729664027553619,
+      "eta_fused": 0.0,
+      "kkt_residual": 0.5563948683786487,
+      "lambda_l1": 0.005,
+      "log_loss": 0.4864776293928324,
+      "primal_dual_gap": 0.03311806104797137
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.1691368527061311,
+      "calibration_intercept": 0.16979522878731707,
+      "calibration_slope": 0.18399757477898127,
+      "eta_fused": 0.05,
+      "kkt_residual": 0.5495202397204446,
+      "lambda_l1": 0.005,
+      "log_loss": 0.4812762229633646,
+      "primal_dual_gap": 0.03334345084032163
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.16927020509122365,
+      "calibration_intercept": 0.16968710430237888,
+      "calibration_slope": 0.1839358416961249,
+      "eta_fused": 0.1,
+      "kkt_residual": 0.5492313921390863,
+      "lambda_l1": 0.005,
+      "log_loss": 0.48145833616899136,
+      "primal_dual_gap": 0.03335586332045619
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.16927020509122365,
+      "calibration_intercept": 0.16968710430237888,
+      "calibration_slope": 0.1839358416961249,
+      "eta_fused": 0.2,
+      "kkt_residual": 0.5492313921390863,
+      "lambda_l1": 0.005,
+      "log_loss": 0.48145833616899136,
+      "primal_dual_gap": 0.03335586332045619
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.17002271740158514,
+      "calibration_intercept": 0.17030892953965068,
+      "calibration_slope": 0.18012678677745528,
+      "eta_fused": 0.0,
+      "kkt_residual": 0.539218017657526,
+      "lambda_l1": 0.01,
+      "log_loss": 0.48435784879011806,
+      "primal_dual_gap": 0.033309804758293836
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.1685792173906587,
+      "calibration_intercept": 0.16970112939602286,
+      "calibration_slope": 0.18913805856323487,
+      "eta_fused": 0.05,
+      "kkt_residual": 0.5340221493425162,
+      "lambda_l1": 0.01,
+      "log_loss": 0.4817508639793093,
+      "primal_dual_gap": 0.03354374581196208
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.16862501546744207,
+      "calibration_intercept": 0.16968419567710274,
+      "calibration_slope": 0.18904626470215097,
+      "eta_fused": 0.1,
+      "kkt_residual": 0.5339120283828899,
+      "lambda_l1": 0.01,
+      "log_loss": 0.4817996417164183,
+      "primal_dual_gap": 0.033544023960766015
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.16862501546744207,
+      "calibration_intercept": 0.16968419567710274,
+      "calibration_slope": 0.18904626470215097,
+      "eta_fused": 0.2,
+      "kkt_residual": 0.5339120283828899,
+      "lambda_l1": 0.01,
+      "log_loss": 0.4817996417164183,
+      "primal_dual_gap": 0.033544023960766015
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.1667131181663359,
+      "calibration_intercept": 0.16967823346019692,
+      "calibration_slope": 0.23017909728922548,
+      "eta_fused": 0.0,
+      "kkt_residual": 0.42624080705119877,
+      "lambda_l1": 0.05,
+      "log_loss": 0.4899739418691247,
+      "primal_dual_gap": 0.03510355324131011
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.16675632757006326,
+      "calibration_intercept": 0.16967823346019703,
+      "calibration_slope": 0.23658976262494166,
+      "eta_fused": 0.05,
+      "kkt_residual": 0.4263517169264475,
+      "lambda_l1": 0.05,
+      "log_loss": 0.4916139925617106,
+      "primal_dual_gap": 0.03533614201398335
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.16675632757006326,
+      "calibration_intercept": 0.16967823346019703,
+      "calibration_slope": 0.23658976262494166,
+      "eta_fused": 0.1,
+      "kkt_residual": 0.4263517169264475,
+      "lambda_l1": 0.05,
+      "log_loss": 0.4916139925617106,
+      "primal_dual_gap": 0.03533614201398335
+    },
+    {
+      "auc_roc": 1.0,
+      "brier": 0.16675632757006326,
+      "calibration_intercept": 0.16967823346019703,
+      "calibration_slope": 0.23658976262494166,
+      "eta_fused": 0.2,
+      "kkt_residual": 0.4263517169264475,
+      "lambda_l1": 0.05,
+      "log_loss": 0.4916139925617106,
+      "primal_dual_gap": 0.03533614201398335
+    }
+  ],
+  "shuffled_time_brier": 0.3130245456633068,
+  "stage_a_non_inferiority_pass": true,
+  "stage_b_superiority_pass": false,
+  "transport_delta_brier_source_to_target": -0.00021693950517401306
+}

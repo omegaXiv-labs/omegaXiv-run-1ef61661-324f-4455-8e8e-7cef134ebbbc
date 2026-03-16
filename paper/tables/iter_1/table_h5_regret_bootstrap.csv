@@ -1,0 +1,4 @@
+scheme,worst_case_regret_margin
+learned_maxmin,-0.48957539533818484
+fixed_historical,-0.4192957324265179
+equal_weight,-0.48957539533818484
