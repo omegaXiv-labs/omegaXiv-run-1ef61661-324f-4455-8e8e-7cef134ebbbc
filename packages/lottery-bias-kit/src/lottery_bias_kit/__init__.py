@@ -1,6 +1,6 @@
 """Reusable lottery bias analysis package extracted from omegaXiv validation contributions."""
 
-from .analysis import AnalyzerConfig, LotteryBiasAnalyzer
+from .analysis import LotteryBiasAnalyzer
 from .data import (
     SplitData,
     assign_regime_ids,
@@ -14,7 +14,6 @@ from .sympy_checks import compute_sympy_invariants
 
 __all__ = [
     "LotteryBiasAnalyzer",
-    "AnalyzerConfig",
     "SplitData",
     "assign_regime_ids",
     "feasible_changepoints",

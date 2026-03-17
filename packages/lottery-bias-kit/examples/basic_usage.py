@@ -12,7 +12,6 @@ def main() -> None:
 
     print("Integrated score:", round(result["p4"]["composite_reproducibility_score"], 4))
     print("H4 lift vs pooled:", round(result["h4"]["brier_lift_vs_pooled"], 4))
-    print("H5 worst-case margin:", round(result["h5"]["summary"]["worst_case_regret_margin"], 4))
 
 
 if __name__ == "__main__":

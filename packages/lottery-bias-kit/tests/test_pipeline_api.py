@@ -23,23 +23,15 @@ def test_full_pipeline_runs_and_returns_expected_keys() -> None:
     config.h4 = {
         "eta_fused": [0.0],
         "lambda_l1": [0.001],
-        "delta_NI": [0.0],
-        "delta_SUP": [0.01],
-    }
-    config.h5 = {
-        "bootstrap_reps": [50],
-        "fdr_floor_c1": [0.01],
-        "sign_floor_c2": [5],
     }
 
     result = analyzer.run_full(frame, config=config)
 
-    assert set(result.keys()) == {"h1", "h2", "h3", "h4", "h5", "p4"}
+    assert set(result.keys()) == {"h1", "h2", "h3", "h4", "p4"}
     assert "regime_ids" in result["h1"]
     assert "best_operating_point" in result["h2"]
     assert "theorem_mismatch_rate" in result["h3"]
     assert "best_brier" in result["h4"]
-    assert "summary" in result["h5"]
     assert "composite_reproducibility_score" in result["p4"]
     assert isinstance(result["h1"]["regime_ids"], list)
     assert np.isfinite(result["h4"]["best_brier"])

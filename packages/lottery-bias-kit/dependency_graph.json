@@ -57,27 +57,6 @@
       "source": "runtime",
       "transitive": true,
       "required_by": ["python-dateutil"]
-    },
-    {
-      "name": "pytest",
-      "spec": ">=8,<9",
-      "source": "dev",
-      "transitive": false,
-      "required_by": ["omegaxiv-lottery-bias-kit[dev]"]
-    },
-    {
-      "name": "ruff",
-      "spec": ">=0.4,<1",
-      "source": "dev",
-      "transitive": false,
-      "required_by": ["omegaxiv-lottery-bias-kit[dev]"]
-    },
-    {
-      "name": "mypy",
-      "spec": ">=1.10,<2",
-      "source": "dev",
-      "transitive": false,
-      "required_by": ["omegaxiv-lottery-bias-kit[dev]"]
     }
   ],
   "edges": [
@@ -88,9 +67,6 @@
     {"from": "pandas", "to": "pytz"},
     {"from": "pandas", "to": "tzdata"},
     {"from": "python-dateutil", "to": "six"},
-    {"from": "sympy", "to": "mpmath"},
-    {"from": "omegaxiv-lottery-bias-kit[dev]", "to": "pytest"},
-    {"from": "omegaxiv-lottery-bias-kit[dev]", "to": "ruff"},
-    {"from": "omegaxiv-lottery-bias-kit[dev]", "to": "mypy"}
+    {"from": "sympy", "to": "mpmath"}
   ]
 }

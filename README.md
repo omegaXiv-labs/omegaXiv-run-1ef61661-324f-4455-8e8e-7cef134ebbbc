@@ -11,4 +11,4 @@ Contents:
 - code/ (generated code, if available)
 - experiments/ (run artifacts, if available)
 - knowledge/ (research notes, if available)
-- MANIFEST.json and artifacts.json
+- MANIFEST.json, artifacts.json, solution.json, and review.json

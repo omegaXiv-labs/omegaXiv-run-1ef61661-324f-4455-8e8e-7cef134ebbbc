@@ -4,7 +4,7 @@ import sympy as sp
 
 
 def compute_sympy_invariants() -> dict[str, str]:
-    """Return symbolic identities used by staged H4/H5 methodology."""
+    """Return symbolic identities used by the partial-identification methodology."""
     delta, gamma, gamma_budget = sp.symbols("Delta gamma Gamma", real=True)
     abs_term = sp.Abs(gamma) * gamma_budget
 
@@ -23,24 +23,8 @@ def compute_sympy_invariants() -> dict[str, str]:
     t_i = by_i * q / (m * h_m)
     monotone_increment = sp.simplify((by_i + 1) * q / (m * h_m) - t_i)
 
-    delta_ni, delta_sup = sp.symbols("delta_NI delta_SUP", nonnegative=True)
-    staged_gate_implication = sp.simplify_logic(
-        sp.Implies(sp.Symbol("Delta") <= -delta_sup, sp.Symbol("Delta") <= delta_ni),
-        form="cnf",
-    )
-
-    w1, w2, d11, d12, d21, d22, alpha1, alpha2 = sp.symbols(
-        "w1 w2 d11 d12 d21 d22 alpha1 alpha2",
-        nonnegative=True,
-    )
-    lhs = alpha1 * (w1 * d11 + w2 * d12) + alpha2 * (w1 * d21 + w2 * d22)
-    rhs = w1 * (alpha1 * d11 + alpha2 * d21) + w2 * (alpha1 * d12 + alpha2 * d22)
-    conic_identity = sp.simplify(lhs - rhs)
-
     return {
         "logistic_second_derivative_identity": str(logistic_second),
         "sign_identification_equivalence_cnf": str(sign_equivalence),
         "by_monotone_increment": str(monotone_increment),
-        "staged_gate_implication_cnf": str(staged_gate_implication),
-        "conic_combination_inner_product_identity": str(conic_identity),
     }

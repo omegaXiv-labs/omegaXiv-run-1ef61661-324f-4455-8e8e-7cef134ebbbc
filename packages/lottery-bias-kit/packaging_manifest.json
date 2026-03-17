@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "package_type": "library",
   "handle_confirmed": true,
-  "summary": "Reusable lottery-bias library exposing staged H1-H5 analysis and integrated P4 scoring from the validated omegaXiv methodology.",
+  "summary": "Reusable library exposing regime segmentation, replication-constrained FDR analysis, bounded-confounding sign identification, and fused-transfer scoring.",
   "registry": {
     "index_path": "packages/registry/index.json",
     "record_path": "packages/registry/lottery-bias-kit.json"
@@ -13,8 +13,7 @@
   "paths": {
     "readme": "packages/lottery-bias-kit/README.md",
     "requirements": "packages/lottery-bias-kit/requirements.txt",
-    "dependency_graph": "packages/lottery-bias-kit/dependency_graph.json",
-    "pyproject": "packages/lottery-bias-kit/pyproject.toml"
+    "dependency_graph": "packages/lottery-bias-kit/dependency_graph.json"
   },
   "install": {
     "canonical": [
@@ -22,15 +21,14 @@
       "ox install lottery-bias-kit==0.1.0"
     ],
     "install_target": "packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl",
-    "smoke_test_command": "SMOKE_DIR=/tmp/ox_smoke_lottery_bias_kit_$(date +%s) && python3 -m venv \"$SMOKE_DIR\" && \"$SMOKE_DIR\"/bin/python -m pip install packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl && \"$SMOKE_DIR\"/bin/python -c \"from lottery_bias_kit import LotteryBiasAnalyzer; print(LotteryBiasAnalyzer.__name__)\""
+    "smoke_test_command": "python -m venv /tmp/ox_smoke_lottery_bias_kit && /tmp/ox_smoke_lottery_bias_kit/bin/python -m pip install packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl && /tmp/ox_smoke_lottery_bias_kit/bin/python -c \"from lottery_bias_kit import LotteryBiasAnalyzer\""
   },
   "extraction_plan": {
     "core_contributions": [
-      "Regime segmentation and changepoint-consensus inference under calibrated penalties (H1/C1).",
-      "Replication-constrained false-discovery control over descriptor prefixes with isotonic fallback handling (H2/C2).",
-      "Bounded-confounding sign identification with theorem-aligned mismatch diagnostics (H3/C3).",
-      "Staged fused-transfer evaluation with non-inferiority/superiority gates and transport diagnostics (H4/C4).",
-      "Reliability-constrained max-min recalibration and conic-impossibility diagnostics for integrated ranking (H5/C5)."
+      "Regime segmentation and changepoint consensus pipeline (H1/C1)",
+      "Replication-constrained FDR operating-point search (H2/C2)",
+      "Partial-identification sign robustness under bounded confounding (H3/C3)",
+      "Fused transfer model and integrated reproducibility score computation (H4/P4/C4)"
     ],
     "source_symbols": [
       {
@@ -40,7 +38,6 @@
           "run_h2_fdr",
           "run_h3_identification",
           "run_h4_transfer",
-          "run_h5_recalibration",
           "run_p4_integrated"
         ]
       },
@@ -53,12 +50,6 @@
           "feasible_changepoints",
           "assign_regime_ids"
         ]
-      },
-      {
-        "source_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/src/lottery_validation/sympy_checks.py",
-        "symbols": [
-          "run_sympy_validation"
-        ]
       }
     ],
     "public_api_mapping": [
@@ -70,7 +61,6 @@
           "run_h2_fdr",
           "run_h3_identification",
           "run_h4_transfer",
-          "run_h5_recalibration",
           "run_p4_integrated"
         ]
       },
@@ -83,11 +73,6 @@
         "exported_module": "lottery_bias_kit.data",
         "exported_symbol": "prepare_lottery_dataframe",
         "maps_from": ["add_descriptors"]
-      },
-      {
-        "exported_module": "lottery_bias_kit.sympy_checks",
-        "exported_symbol": "compute_sympy_invariants",
-        "maps_from": ["run_sympy_validation"]
       }
     ]
   },
@@ -95,14 +80,12 @@
     {
       "kind": "wheel",
       "path": "packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl",
-      "sha256": "a0e2f0b33ba3506f87b72e67d2957446591b2a463b52c37f2218732faaf319a5",
-      "size_bytes": 14551
+      "sha256": "e23579a4a2873da0eb2ca58aba7c2fd8d127c7fc6a2f06403299350e21f7fb92"
     },
     {
       "kind": "archive",
       "path": "packages/lottery-bias-kit/dist/lottery-bias-kit-0.1.0-source.tar.gz",
-      "sha256": "cd0395788e0c70d812ffc282b66e6e8a0b0d894eac1c2f3dac4ad7b18219bf36",
-      "size_bytes": 14567
+      "sha256": "b1e69e27eb69c9d7d0cf493523727769ee76ae449c50c8eb9f6027ffb1c03cfe"
     }
   ]
 }

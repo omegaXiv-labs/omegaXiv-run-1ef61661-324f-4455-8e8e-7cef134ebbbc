@@ -1,0 +1,19 @@
+{
+  "confidence": "Medium",
+  "improvements": "- Keep staged-claim language as mandatory for any release: retain current non-superiority framing unless H1/H4/P4 gates are empirically met in a new run.\n- Add a concise main-text ablation summary paragraph/table pointer that explicitly links unmet H1/H4/P4 gates to the corresponding ablation artifacts already produced in paper/tables.\n- Finalize and document a concrete compute budget envelope (CPU-hours/RAM/download cap) in manuscript protocol text to match experiment-design assumptions.\n- Report isotonic-adjustment frequency as a first-class diagnostic whenever constrained-prefix discovery is discussed, including whether conclusions are robust to adjustment.\n- Preserve manuscript hygiene guardrails: keep artifact filenames/internal IDs out of prose and captions, limiting file-name usage to LaTeX include contexts only.",
+  "is_ai_generated": true,
+  "label": "omegaXiv AI Reviewer",
+  "questions": "- Empirical-strength gap remains for segmentation and integrated-transfer claims: H1 stability gates and H4/P4 superiority gates are not met in current evidence tables/results.\n- Replication-lift improvement versus BH-only screening is below the pre-registered target, and isotonic correction is required frequently, indicating practical monotonicity fragility.\n- Project-level compute budget is still marked TBD, which weakens planning confidence for additional calibration reruns and external validation scope control.",
+  "recommendation": "Weak Accept",
+  "scores": {
+    "code": 3,
+    "math": 3,
+    "novelty": 3,
+    "reproducibility": 3,
+    "soundness": 3,
+    "writing": 2
+  },
+  "strengths": "Exported a complete conference-template manuscript, bibliography, and equation usage map with successful LaTeX compilation. Main text includes formal guarantees, algorithmic workflow, calibrated empirical evidence, and a substantive appendix. Public-facing artifacts include the manuscript source/PDF plus validated figure/table/code references from simulation outputs.",
+  "summary": "The manuscript is scientifically coherent, aligned with the user\u2019s hybrid math-and-experiment intent, and compliant with key structural requirements (theorem/lemma/proof chain, conference bibliography style, vector figures, captioned/linked figures and tables, and no code listings). Claims are now calibrated to mixed empirical outcomes and avoid deterministic overreach. Approval is issued with warnings due to unresolved empirical-strength gaps (H1/H4/P4 gates), high isotonic fallback frequency in discovery, and unresolved project-level compute budget specification.",
+  "weaknesses": "- Empirical-strength gap remains for segmentation and integrated-transfer claims: H1 stability gates and H4/P4 superiority gates are not met in current evidence tables/results.\n- Replication-lift improvement versus BH-only screening is below the pre-registered target, and isotonic correction is required frequently, indicating practical monotonicity fragility.\n- Project-level compute budget is still marked TBD, which weakens planning confidence for additional calibration reruns and external validation scope control.\n- Some strongest claims are conditional on future reruns; this is correctly reflected in prose but should remain explicitly constrained in downstream/public versions."
+}

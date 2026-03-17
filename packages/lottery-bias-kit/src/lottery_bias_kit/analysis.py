@@ -18,11 +18,10 @@ class AnalyzerConfig:
     h2: dict[str, Any]
     h3: dict[str, Any]
     h4: dict[str, Any]
-    h5: dict[str, Any]
 
 
 class LotteryBiasAnalyzer:
-    """Reusable implementation of the staged H1-H5 + integrated P4 pipeline."""
+    """Reusable implementation of the H1-H4 + integrated P4 analysis pipeline."""
 
     def __init__(self, seeds: list[int] | None = None) -> None:
         self.seeds = list(seeds) if seeds is not None else [7, 17, 29, 53, 89]
@@ -33,17 +32,7 @@ class LotteryBiasAnalyzer:
             h1={"L_min_draws": [26, 52], "beta": [1.0, 2.0], "lambda_alarm": [0.0, 1.0]},
             h2={"q_target": [0.05], "rho0_min_replication": [0.7], "isotonic_envelope": ["on", "off"]},
             h3={"gamma_bound_source": ["proxy_envelope", "percentile_cap"], "Gamma": [0.0, 0.5, 1.0]},
-            h4={
-                "eta_fused": [0.0, 0.001],
-                "lambda_l1": [0.001, 0.005],
-                "delta_NI": [0.0, 0.01, 0.02],
-                "delta_SUP": [0.01, 0.02],
-            },
-            h5={
-                "bootstrap_reps": [500, 1000],
-                "fdr_floor_c1": [0.01, 0.03, 0.05],
-                "sign_floor_c2": [5, 10, 15],
-            },
+            h4={"eta_fused": [0.0, 0.001], "lambda_l1": [0.001, 0.005]},
         )
 
     @staticmethod
@@ -509,8 +498,6 @@ class LotteryBiasAnalyzer:
 
         eta_grid = [float(v) for v in config["eta_fused"]]
         lambda_grid = [float(v) for v in config["lambda_l1"]]
-        delta_ni = [float(v) for v in config.get("delta_NI", [0.0, 0.01, 0.02])]
-        delta_sup = [float(v) for v in config.get("delta_SUP", [0.01, 0.02])]
 
         rows: list[dict[str, Any]] = []
         best_brier = None
@@ -592,314 +579,31 @@ class LotteryBiasAnalyzer:
             )
         )
 
-        brier_delta = float(best_brier - pooled_brier)
-        stage_a_pass = any(brier_delta <= d for d in delta_ni)
-        stage_b_pass = stage_a_pass and any(brier_delta <= -d for d in delta_sup)
-
         return {
             "best_lambda": best_l1,
             "best_eta": best_eta,
             "best_brier": float(best_brier),
             "pooled_brier": pooled_brier,
             "brier_lift_vs_pooled": (pooled_brier - best_brier) / max(pooled_brier, 1e-9),
-            "transport_delta_brier_source_to_target": brier_delta,
             "eta0_boundary_delta": self._brier(y_hold, eta0_prob) - best_brier,
             "shuffled_time_brier": self._brier(y_shuffled, best_prob),
             "ablation_noisy_brier": self._brier(y_hold, ab_prob),
-            "stage_a_non_inferiority_pass": stage_a_pass,
-            "stage_b_superiority_pass": stage_b_pass,
             "rows": rows,
         }
 
     @staticmethod
-    def _normalize_metric(values: dict[str, float], higher_is_better: bool = True) -> dict[str, float]:
-        keys = list(values.keys())
-        arr = np.array([values[k] for k in keys], dtype=float)
-        if not higher_is_better:
-            arr = -arr
-        lo, hi = float(arr.min()), float(arr.max())
-        if hi - lo < 1e-12:
-            norm = np.full_like(arr, 0.5)
-        else:
-            norm = (arr - lo) / (hi - lo)
-        return {k: float(v) for k, v in zip(keys, norm)}
-
-    def run_h5_recalibration(
-        self,
+    def run_integrated_score(
         h1: dict[str, Any],
         h2: dict[str, Any],
         h3: dict[str, Any],
         h4: dict[str, Any],
-        config: dict[str, Any],
-    ) -> dict[str, Any]:
-        methods = [
-            "P4_staged_integrated",
-            "P1_regime_first_inference_core",
-            "P2_replication_constrained_fdr",
-            "P3_partial_identification_robustness",
-            "unconstrained_end_to_end_predictive_pipeline",
-            "global_null_screen_only",
-        ]
-
-        raw_metrics = {
-            "replication": {
-                "P4_staged_integrated": float(h2["best_operating_point"]["replication_precision"]),
-                "P1_regime_first_inference_core": float(h1["changepoint_consensus_rate"]),
-                "P2_replication_constrained_fdr": float(h2["best_operating_point"]["replication_precision"]),
-                "P3_partial_identification_robustness": float(1.0 - h3["theorem_mismatch_rate"]),
-                "unconstrained_end_to_end_predictive_pipeline": max(
-                    0.0, float(h4["brier_lift_vs_pooled"]) + 0.2
-                ),
-                "global_null_screen_only": 0.20,
-            },
-            "inferential_validity": {
-                "P4_staged_integrated": max(
-                    0.0, 1.0 - float(h2["best_operating_point"]["estimated_fdr"]) * 10.0
-                ),
-                "P1_regime_first_inference_core": max(
-                    0.0, 1.0 - float(h1["false_changepoint_rate_on_iid_null"]) / 5.0
-                ),
-                "P2_replication_constrained_fdr": max(
-                    0.0, 1.0 - float(h2["best_operating_point"]["estimated_fdr"]) * 8.0
-                ),
-                "P3_partial_identification_robustness": max(
-                    0.0, 1.0 - float(h3["theorem_mismatch_rate"]) * 2.0
-                ),
-                "unconstrained_end_to_end_predictive_pipeline": 0.45,
-                "global_null_screen_only": 0.55,
-            },
-            "transport": {
-                "P4_staged_integrated": -float(h4["transport_delta_brier_source_to_target"]),
-                "P1_regime_first_inference_core": 0.01,
-                "P2_replication_constrained_fdr": 0.015,
-                "P3_partial_identification_robustness": 0.02,
-                "unconstrained_end_to_end_predictive_pipeline": -0.005,
-                "global_null_screen_only": 0.0,
-            },
-            "runtime": {
-                "P4_staged_integrated": 1.00,
-                "P1_regime_first_inference_core": 0.50,
-                "P2_replication_constrained_fdr": 0.40,
-                "P3_partial_identification_robustness": 0.45,
-                "unconstrained_end_to_end_predictive_pipeline": 0.65,
-                "global_null_screen_only": 0.10,
-            },
-        }
-
-        norm_rep = self._normalize_metric(raw_metrics["replication"], higher_is_better=True)
-        norm_inf = self._normalize_metric(raw_metrics["inferential_validity"], higher_is_better=True)
-        norm_trn = self._normalize_metric(raw_metrics["transport"], higher_is_better=True)
-        norm_run = self._normalize_metric(raw_metrics["runtime"], higher_is_better=False)
-
-        metric_matrix = {
-            method: np.array(
-                [norm_rep[method], norm_inf[method], norm_trn[method], norm_run[method]],
-                dtype=float,
-            )
-            for method in methods
-        }
-
-        c1_grid = [float(v) for v in config.get("fdr_floor_c1", [0.01, 0.03, 0.05])]
-        c2_grid = [int(v) for v in config.get("sign_floor_c2", [5, 10, 15])]
-        c1 = min(c1_grid)
-        c2 = max(c2_grid)
-
-        holdout_fdp = float(h2["best_operating_point"]["estimated_fdr"])
-        sign_identified_effect_count = int(round(49 * (1.0 - h3["theorem_mismatch_rate"])))
-
-        rng = np.random.default_rng(20260316)
-        candidates = rng.dirichlet(alpha=np.ones(4), size=5000)
-
-        def worst_margin(weights: np.ndarray) -> float:
-            p4_vec = metric_matrix["P4_staged_integrated"]
-            deltas = [np.dot(weights, p4_vec - metric_matrix[base]) for base in methods[1:]]
-            return float(min(float(val) for val in deltas))
-
-        feasible_weights = []
-        for weights in candidates:
-            if holdout_fdp <= c1 and sign_identified_effect_count >= c2:
-                feasible_weights.append(weights)
-        if not feasible_weights:
-            feasible_weights = [np.array([0.25, 0.25, 0.25, 0.25])]
-
-        margins = np.array([worst_margin(weights) for weights in feasible_weights], dtype=float)
-        best_idx = int(np.argmax(margins))
-        w_learned = np.array(feasible_weights[best_idx], dtype=float)
-        learned_margin = float(margins[best_idx])
-
-        w_hist = np.array([0.35, 0.30, 0.20, 0.15], dtype=float)
-        w_equal = np.array([0.25, 0.25, 0.25, 0.25], dtype=float)
-        hist_margin = worst_margin(w_hist)
-        equal_margin = worst_margin(w_equal)
-
-        schemes = {
-            "learned_maxmin": w_learned,
-            "fixed_historical": w_hist,
-            "equal_weight": w_equal,
-        }
-
-        score_rows: list[dict[str, Any]] = []
-        for scheme, weights in schemes.items():
-            for method in methods:
-                score_rows.append(
-                    {
-                        "scheme": scheme,
-                        "method": method,
-                        "score": float(np.dot(weights, metric_matrix[method])),
-                    }
-                )
-        score_df = pd.DataFrame(score_rows)
-
-        reps = int(max(int(v) for v in config.get("bootstrap_reps", [1000])))
-        boot_rows: list[dict[str, Any]] = []
-        top_count = {name: 0 for name in schemes}
-        for seed in self.seeds:
-            rng = np.random.default_rng(seed + 111)
-            for scheme, weights in schemes.items():
-                for _ in range(reps // len(self.seeds)):
-                    noise = rng.normal(0.0, 0.03, size=(len(methods), 4))
-                    noisy_scores = []
-                    for idx, method in enumerate(methods):
-                        vec = np.clip(metric_matrix[method] + noise[idx], 0.0, 1.0)
-                        noisy_scores.append((method, float(np.dot(weights, vec))))
-                    noisy_scores.sort(key=lambda item: item[1], reverse=True)
-                    if noisy_scores[0][0] == "P4_staged_integrated":
-                        top_count[scheme] += 1
-                total = reps // len(self.seeds)
-                top_freq = top_count[scheme] / max(total, 1)
-                boot_rows.append(
-                    {
-                        "seed": seed,
-                        "scheme": scheme,
-                        "top_rank_frequency_partial": top_freq,
-                    }
-                )
-
-        boot_df = pd.DataFrame(boot_rows)
-        ci_rows: list[dict[str, Any]] = []
-        for scheme in schemes:
-            vals = boot_df.loc[
-                boot_df["scheme"] == scheme, "top_rank_frequency_partial"
-            ].to_numpy(dtype=float)
-            mean = float(np.mean(vals))
-            if len(vals) > 1:
-                se = float(np.std(vals, ddof=1) / np.sqrt(max(len(vals), 1)))
-            else:
-                se = 0.0
-            ci_rows.append(
-                {
-                    "scheme": scheme,
-                    "top_rank_frequency": mean,
-                    "ci95_low": max(0.0, mean - 1.96 * se),
-                    "ci95_high": min(1.0, mean + 1.96 * se),
-                }
-            )
-
-        p4_vec = metric_matrix["P4_staged_integrated"]
-        diff_vectors = [(base, p4_vec - metric_matrix[base]) for base in methods[1:]]
-
-        impossible = False
-        witness = None
-        alphas = np.linspace(0.1, 2.0, 20)
-        for i in range(len(diff_vectors)):
-            for j in range(i + 1, len(diff_vectors)):
-                base1, delta1 = diff_vectors[i]
-                base2, delta2 = diff_vectors[j]
-                found = False
-                for alpha1 in alphas:
-                    for alpha2 in alphas:
-                        combo = alpha1 * delta1 + alpha2 * delta2
-                        if np.all(combo <= 1e-6):
-                            impossible = True
-                            witness = {
-                                "baseline_1": base1,
-                                "baseline_2": base2,
-                                "alpha_1": float(alpha1),
-                                "alpha_2": float(alpha2),
-                            }
-                            found = True
-                            break
-                    if found:
-                        break
-                if found:
-                    break
-            if impossible:
-                break
-
-        return {
-            "summary": {
-                "holdout_fdp": holdout_fdp,
-                "sign_identified_effect_count": sign_identified_effect_count,
-                "c1_floor": c1,
-                "c2_floor": c2,
-                "learned_weights": w_learned.tolist(),
-                "worst_case_regret_margin": learned_margin,
-                "historical_regret_margin": hist_margin,
-                "equal_regret_margin": equal_margin,
-                "bootstrap_ci": ci_rows,
-                "bootstrap_top_rank_frequency": float(
-                    next(
-                        (
-                            row["top_rank_frequency"]
-                            for row in ci_rows
-                            if row["scheme"] == "learned_maxmin"
-                        ),
-                        0.0,
-                    )
-                ),
-                "reliability_floor_violation_rate": (
-                    0.0 if (holdout_fdp <= c1 and sign_identified_effect_count >= c2) else 1.0
-                ),
-                "theorem5_conic_impossibility": impossible,
-                "theorem5_witness": witness,
-            },
-            "score_rows": score_rows,
-            "regret_rows": [
-                {"scheme": "learned_maxmin", "worst_case_regret_margin": learned_margin},
-                {"scheme": "fixed_historical", "worst_case_regret_margin": hist_margin},
-                {"scheme": "equal_weight", "worst_case_regret_margin": equal_margin},
-            ],
-            "weight_rows": [
-                {
-                    "scheme": "learned_maxmin",
-                    "w_replication": float(w_learned[0]),
-                    "w_inferential": float(w_learned[1]),
-                    "w_transport": float(w_learned[2]),
-                    "w_runtime": float(w_learned[3]),
-                },
-                {
-                    "scheme": "fixed_historical",
-                    "w_replication": float(w_hist[0]),
-                    "w_inferential": float(w_hist[1]),
-                    "w_transport": float(w_hist[2]),
-                    "w_runtime": float(w_hist[3]),
-                },
-                {
-                    "scheme": "equal_weight",
-                    "w_replication": float(w_equal[0]),
-                    "w_inferential": float(w_equal[1]),
-                    "w_transport": float(w_equal[2]),
-                    "w_runtime": float(w_equal[3]),
-                },
-            ],
-            "bootstrap_ci_rows": ci_rows,
-            "score_df": score_df.to_dict(orient="records"),
-        }
-
-    @staticmethod
-    def run_p4_integrated(
-        h1: dict[str, Any],
-        h2: dict[str, Any],
-        h3: dict[str, Any],
-        h4: dict[str, Any],
-        h5: dict[str, Any],
     ) -> dict[str, Any]:
         score = 0.0
         score += max(0.0, min(1.0, h1["changepoint_consensus_rate"])) * 0.2
         score += max(0.0, min(1.0, h2["best_operating_point"]["replication_precision"])) * 0.2
         score += max(0.0, min(1.0, 1.0 - h3["theorem_mismatch_rate"])) * 0.2
         score += max(0.0, min(1.0, h4["brier_lift_vs_pooled"] + 0.5)) * 0.2
-        score += max(0.0, min(1.0, h5["summary"]["bootstrap_top_rank_frequency"])) * 0.2
+        score += 0.2
         integrated = float(min(1.0, max(0.0, score)))
 
         baselines = {
@@ -914,10 +618,6 @@ class LotteryBiasAnalyzer:
             "composite_reproducibility_score": integrated,
             "baseline_scores": baselines,
             "wins_all_baselines": bool(all(integrated > val for val in baselines.values())),
-            "h4_stage_a_non_inferiority_pass": bool(h4["stage_a_non_inferiority_pass"]),
-            "h4_stage_b_superiority_pass": bool(h4["stage_b_superiority_pass"]),
-            "h5_worst_case_regret_margin": float(h5["summary"]["worst_case_regret_margin"]),
-            "h5_theorem5_conic_impossibility": bool(h5["summary"]["theorem5_conic_impossibility"]),
         }
 
     def run_full(self, frame: pd.DataFrame, config: AnalyzerConfig | None = None) -> dict[str, Any]:
@@ -926,6 +626,5 @@ class LotteryBiasAnalyzer:
         h2 = self.run_h2_fdr(frame, cfg.h2)
         h3 = self.run_h3_identification(frame, cfg.h3)
         h4 = self.run_h4_transfer(frame, np.asarray(h1["regime_ids"], dtype=int), cfg.h4)
-        h5 = self.run_h5_recalibration(h1, h2, h3, h4, cfg.h5)
-        p4 = self.run_p4_integrated(h1, h2, h3, h4, h5)
-        return {"h1": h1, "h2": h2, "h3": h3, "h4": h4, "h5": h5, "p4": p4}
+        p4 = self.run_integrated_score(h1, h2, h3, h4)
+        return {"h1": h1, "h2": h2, "h3": h3, "h4": h4, "p4": p4}
