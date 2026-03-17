@@ -21,29 +21,24 @@
   },
   "artifacts": [
     {
-      "kind": "github_repo",
-      "label": "GitHub Repo",
-      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc"
-    },
-    {
       "kind": "paper_pdf",
       "label": "Paper PDF",
-      "uri": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/paper/main.pdf"
+      "uri": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/paper/main.pdf"
     },
     {
       "kind": "paper_thumbnail",
       "label": "Paper Thumbnail",
-      "uri": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/paper/thumbnail.png"
+      "uri": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/paper/thumbnail.png"
     },
     {
       "kind": "latex_sources",
       "label": "LaTeX Sources",
-      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/blob/main/paper/main.tex"
+      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/blob/paper-v3/paper/main.tex"
     },
     {
       "kind": "sources",
       "label": "Sources",
-      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/blob/main/sources/sources.json"
+      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/blob/paper-v3/sources/sources.json"
     }
   ],
   "artifacts_summary": "Exported a complete conference-template manuscript, bibliography, and equation usage map with successful LaTeX compilation. Main text includes formal guarantees, algorithmic workflow, calibrated empirical evidence, and a substantive appendix. Public-facing artifacts include the manuscript source/PDF plus validated figure/table/code references from simulation outputs.",
@@ -170,98 +165,98 @@
         "path": "packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl",
         "sha256": "e23579a4a2873da0eb2ca58aba7c2fd8d127c7fc6a2f06403299350e21f7fb92",
         "size_bytes": 11772,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl"
       },
       {
         "kind": "archive",
         "path": "packages/lottery-bias-kit/dist/lottery-bias-kit-0.1.0-source.tar.gz",
         "sha256": "b1e69e27eb69c9d7d0cf493523727769ee76ae449c50c8eb9f6027ffb1c03cfe",
         "size_bytes": 12347,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/dist/lottery-bias-kit-0.1.0-source.tar.gz"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/dist/lottery-bias-kit-0.1.0-source.tar.gz"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/packaging_manifest.json",
         "sha256": "66e13961053851c96a352c91a9f00782f2062360121203ae0cfc2173addace0f",
         "size_bytes": 3373,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/packaging_manifest.json"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/packaging_manifest.json"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/dependency_graph.json",
         "sha256": "bae453bcabb13d2799c9b596af00741e00e63d1edb75dd19736cd0721ee04821",
         "size_bytes": 1744,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/dependency_graph.json"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/dependency_graph.json"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/requirements.txt",
         "sha256": "305b747d33f9e9e35eba950407581842901959b73f9c1986f4350223114062fc",
         "size_bytes": 45,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/requirements.txt"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/requirements.txt"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/README.md",
         "sha256": "a68177ba6d5048f5ae7f3357bf7f7cac22108afaf0767747705ca49af28d58aa",
         "size_bytes": 1758,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/README.md"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/README.md"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/src/lottery_bias_kit/analysis.py",
         "sha256": "0f6a26bb78f9c1dd63a08096d390494e7154cebb582bfc6ce67fdf8aca644c25",
         "size_bytes": 25841,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/src/lottery_bias_kit/analysis.py"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/src/lottery_bias_kit/analysis.py"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/src/lottery_bias_kit/data.py",
         "sha256": "68cf51177c97080a1251f2a71f493380346e0db08c8a5679752621ab7f9d336b",
         "size_bytes": 4126,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/src/lottery_bias_kit/data.py"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/src/lottery_bias_kit/data.py"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/src/lottery_bias_kit/sympy_checks.py",
         "sha256": "ab133c80cd52ebff361d20199a982a9b3ee5a94d54281eb9bd0e5e8c02b1cd78",
         "size_bytes": 1078,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/src/lottery_bias_kit/sympy_checks.py"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/src/lottery_bias_kit/sympy_checks.py"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/tests/test_pipeline_api.py",
         "sha256": "535424ab3787803ccccaa8931d504312bae7370452c65ecdc25de8f790ec88a3",
         "size_bytes": 1195,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/tests/test_pipeline_api.py"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/tests/test_pipeline_api.py"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/examples/basic_usage.py",
         "sha256": "ac2ada0a412dd57d829c8ab8c4dd96724ffdea5e7cc3a3d0ab02c5a445baf64e",
         "size_bytes": 538,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/examples/basic_usage.py"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/examples/basic_usage.py"
       },
       {
         "kind": "other",
         "path": "packages/registry/index.json",
         "sha256": "6ac7a8d50aefebb51dd06c75afffe750eb728dfc9ed6f0a7159225b6b0fed6c8",
         "size_bytes": 232,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/registry/index.json"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/registry/index.json"
       },
       {
         "kind": "other",
         "path": "packages/registry/lottery-bias-kit.json",
         "sha256": "499c895eaef4762b9ee8f0d1d6178e220ddfdc1ab72be8aff3e3c771362d3ede",
         "size_bytes": 446,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/registry/lottery-bias-kit.json"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/registry/lottery-bias-kit.json"
       },
       {
         "kind": "other",
         "path": "packages/lottery-bias-kit/pyproject.toml",
         "sha256": null,
         "size_bytes": 589,
-        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/pyproject.toml"
+        "url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/pyproject.toml"
       }
     ],
     "dependencies": [
@@ -372,7 +367,7 @@
     ],
     "dependency_graph_mermaid": "graph TD\n  A[omegaxiv-lottery-bias-kit] --> B[numpy >=1.24,<3]\n  A --> C[pandas >=2.0,<3]\n  A --> D[sympy >=1.12,<2]\n  C --> E[python-dateutil >=2.8.2]\n  C --> F[pytz >=2020.1]\n  C --> G[tzdata >=2022.7]\n  E --> H[six >=1.5]\n  D --> I[mpmath >=1.1.0,<1.4]",
     "dependency_graph_path": "packages/lottery-bias-kit/dependency_graph.json",
-    "dependency_graph_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/dependency_graph.json",
+    "dependency_graph_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/dependency_graph.json",
     "distribution_name": "omegaxiv-lottery-bias-kit",
     "handle": "lottery-bias-kit",
     "handle_alternatives": [
@@ -382,15 +377,19 @@
     "handle_confirmed": true,
     "import_name": "lottery_bias_kit",
     "install_command": "pip install omegaxiv && ox install lottery-bias-kit==0.1.0",
+    "install_ready": true,
     "install_target": "packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl",
     "manager_install_command": "pip install omegaxiv",
     "manifest_path": "packages/lottery-bias-kit/packaging_manifest.json",
     "package_type": "library",
     "readme_path": "packages/lottery-bias-kit/README.md",
-    "readme_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/README.md",
+    "readme_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/README.md",
+    "registry_index_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaxiv-registry/main/packages/index.json",
+    "registry_record_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaxiv-registry/main/handles/lottery-bias-kit.json",
+    "registry_status": "synced",
     "requirements_path": "packages/lottery-bias-kit/requirements.txt",
-    "requirements_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/packages/lottery-bias-kit/requirements.txt",
-    "version": "0.1.0"
+    "requirements_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/paper-v3/packages/lottery-bias-kit/requirements.txt",
+    "version": "0.1.1"
   },
   "paper_pdf_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/paper/main.pdf",
   "paper_thumbnail_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc/main/paper/thumbnail.png",
@@ -402,11 +401,14 @@
   "related_links": [
     "/api/mock/files/5d6921e9-5df1-44c0-8849-f11ffc3a4611?name=lotto_draws_1986_2026.txt"
   ],
+  "repo_commit_sha": "9e9ce070c0ad2ec8e984c3e9f6164355f0ff61d9",
+  "repo_ref": "paper-v3",
   "repo_url": "https://github.com/omegaXiv-labs/omegaXiv-run-1ef61661-324f-4455-8e8e-7cef134ebbbc",
   "request_text": "Title: Detecting Physical and Procedural Bias in Lottery Draws: A Number-Theoretic and Statistical Study\nAbstract: This project investigates whether real-world lottery draws deviate from ideal uniform randomness due to physical implementation effects such as ball weight, wear, machine mechanics, or procedural conditions. The approach combines number-theoretic feature design with statistical hypothesis testing and predictive modeling on historical draw data to detect persistent, reproducible structure. Rather than assuming dependence across draws, we explicitly test independence, stationarity, and mechanism-specific bias using both global and time-local analyses. The expected impact is a rigorous framework for distinguishing true mechanical bias from random fluctuation, with reproducible methods that can be applied across lottery systems.\nFull Description: We propose a research study that tests a central hypothesis: lottery outcomes may exhibit small but detectable departures from ideal random sampling because physical draw systems are not perfectly symmetric in practice. The scope includes constructing formal null models for each lottery format (e.g., k-of-n without replacement, plus bonus balls where applicable), then comparing observed outcomes against those models using exact and asymptotic tests. The work will focus on interpretable evidence of bias, not claims of deterministic prediction.\n\nMethodologically, the project will integrate: (1) combinatorial and number-theoretic descriptors of draw outcomes (gap structures, residue-class frequencies, parity and modular signatures, overlap counts with recent windows, repeat-time distributions), (2) statistical goodness-of-fit and dependence diagnostics, and (3) predictive experiments with strict temporal validation. We will account for confounders such as rule changes, machine replacements, and format transitions by segmenting data into regime-consistent periods and running change-point analysis. Multiple-testing control will be enforced to reduce false discoveries when scanning many candidate patterns.\n\nConstraints include limited observability of latent physical variables (exact ball masses, machine wear state, operator procedures), potential nonstationarity over years, and high risk of spurious pattern detection in large combinatorial spaces. Success criteria are therefore defined by reproducibility across held-out time periods and effect sizes that remain significant after correction and robustness checks. Deliverables will include a cleaned dataset specification, reproducible analysis code, a bias-detection report with uncertainty quantification, and a paper-ready manuscript sectioning theory, methods, results, and limitations.\nProblem Type: Open Question\nDifficulty: Advanced\nDomain: Mathematics\nOriginator: Marius-Constantin Dinu\nCompute Budget: TBD\nTarget Deadline: 2026-03-15\nTags: lottery, number-theory, randomness-testing, hypothesis-testing, time-series, causal-inference, combinatorics, reproducibility\nCategories: Mathematics\nExpected Artifacts: Paper, Code, Package\nRelated Links: /api/mock/files/5d6921e9-5df1-44c0-8849-f11ffc3a4611?name=lotto_draws_1986_2026.txt\nDataset Links: Historical lottery draw records for one or more games (draw date, full number set, bonus numbers, machine/ball set metadata if available), split into regime-consistent eras; optional augmentation with public audit or procedural logs where available.",
   "root_run_id": "1ef61661-324f-4455-8e8e-7cef134ebbbc",
   "run_id": "1ef61661-324f-4455-8e8e-7cef134ebbbc",
   "session_id": "1ef61661-324f-4455-8e8e-7cef134ebbbc",
+  "snapshot_branch": "snapshot/paper-v3",
   "tags": [
     "lottery",
     "number-theory",
@@ -419,5 +421,6 @@
   ],
   "target_deadline": "2026-03-15",
   "title": "Detecting Physical and Procedural Bias in Lottery Draws: A Number-Theoretic and Statistical Study",
-  "updated_at": "2026-03-16T21:05:12.260562+00:00"
+  "updated_at": "2026-03-16T21:05:12.260562+00:00",
+  "version": 3
 }
