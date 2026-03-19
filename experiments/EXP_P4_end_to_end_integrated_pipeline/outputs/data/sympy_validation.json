@@ -1,0 +1,10 @@
+{
+  "by_monotone_increment": "q/(H_m*m)",
+  "logistic_second_derivative_identity": "0",
+  "notes": [
+    "logistic_second_derivative_identity should simplify to 0.",
+    "sign-identification equivalence encodes C3 iff condition.",
+    "BY increment should be positive for q,m,H_m > 0."
+  ],
+  "sign_identification_equivalence_cnf": "((Abs(Delta) > Gamma*Abs(gamma)) | (Delta + Gamma*Abs(gamma) >= 0)) & ((Abs(Delta) > Gamma*Abs(gamma)) | (Delta - Gamma*Abs(gamma) <= 0)) & ((Abs(Delta) <= Gamma*Abs(gamma)) | (Delta + Gamma*Abs(gamma) < 0) | (Delta - Gamma*Abs(gamma) > 0))"
+}

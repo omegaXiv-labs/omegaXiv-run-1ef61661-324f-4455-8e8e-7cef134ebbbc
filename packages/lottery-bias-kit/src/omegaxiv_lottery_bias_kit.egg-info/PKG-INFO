@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: omegaxiv-lottery-bias-kit
+Version: 0.1.0
+Summary: Reusable lottery bias detection library extracted from omegaXiv validation methodology
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy<3,>=1.24
+Requires-Dist: pandas<3,>=2.0
+Requires-Dist: sympy<2,>=1.12
+Provides-Extra: plot
+Requires-Dist: matplotlib<4,>=3.8; extra == "plot"
+Requires-Dist: seaborn<1,>=0.13; extra == "plot"
+Provides-Extra: dev
+Requires-Dist: pytest<9,>=8; extra == "dev"
+Requires-Dist: ruff<1,>=0.4; extra == "dev"
+Requires-Dist: mypy<2,>=1.10; extra == "dev"
+
+# lottery-bias-kit
+
+## Overview
+`lottery-bias-kit` is a reusable Python library that packages the omegaXiv lottery-bias methodology into a clean API.
+It exposes regime segmentation, replication-constrained FDR screening, partial-identification robustness, and fused-transfer scoring as importable components.
+
+## Installation
+Canonical user installation flow:
+1. `pip install omegaxiv`
+2. `ox install lottery-bias-kit==0.1.0`
+
+Maintainer/dev-only source installation (not the canonical end-user path):
+- `pip install packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl`
+
+## Configuration
+`LotteryBiasAnalyzer` accepts explicit seed lists and structured per-stage configuration.
+Use `LotteryBiasAnalyzer.default_config()` as a baseline, then override stage parameters (`h1`, `h2`, `h3`, `h4`) for your audit protocol.
+
+## Usage Examples
+```python
+from lottery_bias_kit import LotteryBiasAnalyzer, sample_iid_draws
+
+analyzer = LotteryBiasAnalyzer(seeds=[11, 23])
+frame = sample_iid_draws(n_draws=320, seed=11)
+result = analyzer.run_full(frame)
+
+print(result["p4"]["composite_reproducibility_score"])
+print(result["h4"]["brier_lift_vs_pooled"])
+```
+
+Symbolic invariants:
+```python
+from lottery_bias_kit import compute_sympy_invariants
+
+checks = compute_sympy_invariants()
+print(checks["sign_identification_equivalence_cnf"])
+```
+
+## Troubleshooting
+- If `temporal_split` fails on very small inputs, increase sample size beyond 250 rows.
+- If optimization metrics are unstable across seeds, run more seeds and inspect `changepoint_consensus_rate`.
+- If FDR monotonicity fails frequently, enable isotonic envelopes in `h2.isotonic_envelope`.
+- If calibration diagnostics degrade, reduce transfer complexity by lowering `h4.eta_fused`.

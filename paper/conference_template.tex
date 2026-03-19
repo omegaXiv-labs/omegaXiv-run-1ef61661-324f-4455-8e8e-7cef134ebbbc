@@ -1,0 +1,57 @@
+% This file was adapted from ICLR2022_conference.tex example provided for the ICLR conference
+\documentclass{article} % For LaTeX2e
+\usepackage{conference,times}
+\usepackage{easyReview}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+
+\usepackage{amsthm,amssymb}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+
+% Please leave these options as they are
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=purple,
+    pdftitle={@@@PDF_TITLE@@@},
+    pdfpagemode=FullScreen,
+    }
+
+@@@CAMERA_READY@@@
+@@@PREPRINT@@@
+
+\title{@@@TITLE@@@}
+
+\author{@@@AUTHORS@@@}
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+@@@ABSTRACT@@@
+\end{abstract}
+
+@@@MAIN_CONTENT@@@
+
+@@@AUTHOR_CONTRIBUTIONS@@@
+@@@ACKNOWLEDGMENTS@@@
+
+\bibliographystyle{@@@BIB_STYLE@@@}
+\bibliography{@@@BIB_FILE@@@}
+
+\appendix
+@@@APPENDIX@@@
+
+\end{document}

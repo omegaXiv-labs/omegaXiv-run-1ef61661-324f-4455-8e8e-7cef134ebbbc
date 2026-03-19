@@ -1,0 +1,21 @@
+{by_monotone_increment: q/(H_m*m), conic_combination_inner_product_identity: 0 ↪
+
+↪ , logistic_second_derivative_identity: 0, notes: [logistic_second_derivative ↪
+
+↪ _identity should simplify to 0., sign-identification equivalence encodes C3  ↪
+
+↪ iff condition., BY increment should be positive for q,m,H_m > 0., staged_gat ↪
+
+↪ e_implication encodes C4 Stage-B => Stage-A safety., conic combination ident ↪
+
+↪ ity supports C5 impossibility argument algebra.], sign_identification_equiva ↪
+
+↪ lence_cnf: ((Abs(Delta) > Gamma*Abs(gamma)) | (Delta + Gamma*Abs(gamma) >= 0 ↪
+
+↪ )) & ((Abs(Delta) > Gamma*Abs(gamma)) | (Delta - Gamma*Abs(gamma) <= 0)) & ( ↪
+
+↪ (Abs(Delta) <= Gamma*Abs(gamma)) | (Delta + Gamma*Abs(gamma) < 0) | (Delta - ↪
+
+↪  Gamma*Abs(gamma) > 0)), staged_gate_implication_cnf: (Delta <= delta_NI) |  ↪
+
+↪ (Delta > -delta_SUP)}

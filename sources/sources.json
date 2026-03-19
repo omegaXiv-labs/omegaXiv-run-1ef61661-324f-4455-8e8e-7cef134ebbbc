@@ -1,0 +1,1292 @@
+[
+  {
+    "assumptions": [
+      "AR(1)-style data-generating process",
+      "Innovations are independent with finite variance"
+    ],
+    "authors": [
+      "D. A. Dickey",
+      "W. A. Fuller"
+    ],
+    "citation": "S01",
+    "claims": [
+      "Classical t-distributions are invalid under unit-root null"
+    ],
+    "conclusions": [
+      "Dedicated critical values are required for unit-root inference"
+    ],
+    "contributions": [
+      "Derivation of nonstandard null distributions for unit-root tests"
+    ],
+    "future_work": [
+      "Augmentation for serially correlated errors"
+    ],
+    "key_equations": [
+      "y_t = rho y_{t-1} + e_t",
+      "Delta y_t = gamma y_{t-1} + e_t, gamma = rho-1"
+    ],
+    "limitations": [
+      "Baseline formulation assumes simple AR structure"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces the Dickey-Fuller unit-root framework and asymptotic distributions for testing nonstationarity; critical for checking whether lottery feature time series are regime-stable before bias inference.",
+    "title": "Distribution of the Estimators for Autoregressive Time Series with a Unit Root",
+    "url": "https://doi.org/10.1080/01621459.1979.10482531",
+    "year": 1979
+  },
+  {
+    "assumptions": [
+      "Lag augmentation captures short-run dependence"
+    ],
+    "authors": [
+      "S. E. Said",
+      "D. A. Dickey"
+    ],
+    "citation": "S02",
+    "claims": [
+      "Augmentation yields valid unit-root tests under broader dynamics"
+    ],
+    "conclusions": [
+      "Lagged-difference terms improve robustness"
+    ],
+    "contributions": [
+      "ADF-style regression framework"
+    ],
+    "future_work": [
+      "Data-driven lag selection criteria"
+    ],
+    "key_equations": [
+      "Delta y_t = alpha y_{t-1} + sum_{i=1}^p beta_i Delta y_{t-i} + e_t"
+    ],
+    "limitations": [
+      "Lag-order selection affects power"
+    ],
+    "source_type": "paper",
+    "summary": "Extends Dickey-Fuller testing to higher-order ARMA error structures using augmentation; directly relevant for dependence checks in lottery-derived feature sequences.",
+    "title": "Testing for Unit Roots in Autoregressive-Moving Average Models of Unknown Order",
+    "url": "https://doi.org/10.1093/biomet/71.3.599",
+    "year": 1984
+  },
+  {
+    "assumptions": [
+      "Long-run variance estimator is consistent"
+    ],
+    "authors": [
+      "D. Kwiatkowski",
+      "P. C. B. Phillips",
+      "P. Schmidt",
+      "Y. Shin"
+    ],
+    "citation": "S03",
+    "claims": [
+      "Provides complementary evidence to unit-root-null tests"
+    ],
+    "conclusions": [
+      "Joint ADF/KPSS use improves diagnosis"
+    ],
+    "contributions": [
+      "Stationarity-null testing framework"
+    ],
+    "future_work": [
+      "Robust high-frequency and long-memory variants"
+    ],
+    "key_equations": [
+      "KPSS = T^{-2} sum_{t=1}^{T} S_t^2 / hat{sigma}^2",
+      "S_t = sum_{i=1}^{t} hat{e}_i"
+    ],
+    "limitations": [
+      "Bandwidth selection influences finite-sample size"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces KPSS stationarity test, complementary to ADF. Useful for symmetric evidence: rejecting both nulls flags modeling misspecification or structural instability.",
+    "title": "Testing the null hypothesis of stationarity against the alternative of a unit root",
+    "url": "https://doi.org/10.1016/0304-4076(92)90104-Y",
+    "year": 1992
+  },
+  {
+    "assumptions": [
+      "Weak dependence and consistent long-run variance estimation"
+    ],
+    "authors": [
+      "P. C. B. Phillips",
+      "P. Perron"
+    ],
+    "citation": "S04",
+    "claims": [
+      "No lag augmentation required for correction"
+    ],
+    "conclusions": [
+      "Alternative to ADF under complex errors"
+    ],
+    "contributions": [
+      "PP test statistics robust to nuisance autocorrelation"
+    ],
+    "future_work": [
+      "Adaptive bandwidth rules"
+    ],
+    "key_equations": [
+      "Z_t = t_{gamma} - (hat{lambda}-hat{gamma}_0)/(2 hat{sigma}^2) * (sum y_{t-1}^2)^{1/2}",
+      "Z_alpha = T(hat{rho}-1) - T^{-2}(hat{lambda}-hat{gamma}_0)/(2hat{sigma}^2)"
+    ],
+    "limitations": [
+      "Kernel/bandwidth choice affects performance"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces nonparametric corrections for serial correlation and heteroskedasticity in unit-root testing; relevant when lottery features have unknown error dynamics.",
+    "title": "Testing for a Unit Root in Time Series Regression",
+    "url": "https://doi.org/10.1093/biomet/75.2.335",
+    "year": 1988
+  },
+  {
+    "assumptions": [
+      "Model residuals are approximately white noise under null"
+    ],
+    "authors": [
+      "G. M. Ljung",
+      "G. E. P. Box"
+    ],
+    "citation": "S05",
+    "claims": [
+      "Improved small-sample behavior versus Box-Pierce"
+    ],
+    "conclusions": [
+      "Useful post-fit diagnostic for dependence"
+    ],
+    "contributions": [
+      "Finite-sample corrected omnibus autocorrelation test"
+    ],
+    "future_work": [
+      "Adaptive lag-window selection"
+    ],
+    "key_equations": [
+      "Q = n(n+2) sum_{k=1}^{h} hat{rho}_k^2/(n-k)"
+    ],
+    "limitations": [
+      "Power depends on horizon h"
+    ],
+    "source_type": "paper",
+    "summary": "Defines Ljung-Box Q-statistic for residual autocorrelation; central for testing independence assumptions in draw-level feature models.",
+    "title": "On a Measure of Lack of Fit in Time Series Models",
+    "url": "https://doi.org/10.1093/biomet/65.2.297",
+    "year": 1978
+  },
+  {
+    "assumptions": [
+      "Large-sample approximation"
+    ],
+    "authors": [
+      "G. E. P. Box",
+      "D. A. Pierce"
+    ],
+    "citation": "S06",
+    "claims": [
+      "Enables compact model adequacy testing"
+    ],
+    "conclusions": [
+      "Residual whiteness can be tested jointly"
+    ],
+    "contributions": [
+      "Omnibus check for residual autocorrelation"
+    ],
+    "future_work": [
+      "Small-sample corrections"
+    ],
+    "key_equations": [
+      "Q_{BP} = n sum_{k=1}^{h} hat{rho}_k^2"
+    ],
+    "limitations": [
+      "Finite-sample calibration weaker than Ljung-Box"
+    ],
+    "source_type": "paper",
+    "summary": "Establishes Box-Pierce residual autocorrelation test, a precursor to Ljung-Box; useful as baseline independence diagnostic.",
+    "title": "Distribution of Residual Autocorrelations in Autoregressive-Integrated Moving Average Time Series Models",
+    "url": "https://doi.org/10.1080/01621459.1970.10481180",
+    "year": 1970
+  },
+  {
+    "assumptions": [
+      "IID null after prewhitening/modeling"
+    ],
+    "authors": [
+      "W. A. Brock",
+      "W. D. Dechert",
+      "J. A. Scheinkman",
+      "B. LeBaron"
+    ],
+    "citation": "S07",
+    "claims": [
+      "Can reject IID when linear tests do not"
+    ],
+    "conclusions": [
+      "Useful secondary independence screen"
+    ],
+    "contributions": [
+      "Nonlinear dependence diagnostic"
+    ],
+    "future_work": [
+      "Robust parameter selection strategies"
+    ],
+    "key_equations": [
+      "W_{m,epsilon} = sqrt{N} (C_m(epsilon)-C_1(epsilon)^m)/hat{sigma}_{m,epsilon}"
+    ],
+    "limitations": [
+      "Sensitive to embedding dimension and epsilon"
+    ],
+    "source_type": "paper",
+    "summary": "BDS test detects nonlinear dependence missed by linear autocorrelation tests; relevant for checking subtle mechanism-driven structure in lottery features.",
+    "title": "A test for independence based on the correlation dimension",
+    "url": "https://doi.org/10.1080/07474939608800353",
+    "year": 1996
+  },
+  {
+    "assumptions": [
+      "Reference in-control distribution specified"
+    ],
+    "authors": [
+      "E. S. Page"
+    ],
+    "citation": "S08",
+    "claims": [
+      "CUSUM is sensitive to small persistent shifts"
+    ],
+    "conclusions": [
+      "Suitable for local regime-break surveillance"
+    ],
+    "contributions": [
+      "Sequential mean-shift detection"
+    ],
+    "future_work": [
+      "Multivariate and nonparametric CUSUM"
+    ],
+    "key_equations": [
+      "S_t = max(0, S_{t-1} + x_t - k)",
+      "Signal if S_t > h"
+    ],
+    "limitations": [
+      "Requires tuning k and h"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces CUSUM sequential change detection; supports rolling/local anomaly monitoring around operational lottery transitions.",
+    "title": "Continuous Inspection Schemes",
+    "url": "https://doi.org/10.1093/biomet/41.1-2.100",
+    "year": 1954
+  },
+  {
+    "assumptions": [
+      "Recursive residual framework"
+    ],
+    "authors": [
+      "R. L. Brown",
+      "J. Durbin",
+      "J. M. Evans"
+    ],
+    "citation": "S09",
+    "claims": [
+      "Detects gradual and abrupt instability"
+    ],
+    "conclusions": [
+      "Essential for regime-consistent inference"
+    ],
+    "contributions": [
+      "Operational structural-stability diagnostics"
+    ],
+    "future_work": [
+      "Break-date estimators with confidence sets"
+    ],
+    "key_equations": [
+      "W_t = sum_{i=k+1}^{t} w_i / hat{sigma}",
+      "CUSUMSQ_t = sum w_i^2 / sum w_i^2"
+    ],
+    "limitations": [
+      "Power varies by break type"
+    ],
+    "source_type": "paper",
+    "summary": "Develops CUSUM and CUSUMSQ stability diagnostics for regression coefficients; relevant to testing whether estimated lottery effects persist across eras.",
+    "title": "Techniques for Testing the Constancy of Regression Relationships Over Time",
+    "url": "https://www.jstor.org/stable/2984889",
+    "year": 1975
+  },
+  {
+    "assumptions": [
+      "Piecewise linear model with finite number of breaks"
+    ],
+    "authors": [
+      "J. Bai",
+      "P. Perron"
+    ],
+    "citation": "S10",
+    "claims": [
+      "Consistent estimation of multiple breakpoints"
+    ],
+    "conclusions": [
+      "Framework supports regime segmentation"
+    ],
+    "contributions": [
+      "Break-date estimation and break-count testing"
+    ],
+    "future_work": [
+      "Critical-value refinements and software"
+    ],
+    "key_equations": [
+      "y_t = x_t' beta_j + u_t for t=T_{j-1}+1,...,T_j",
+      "hat{T} = argmin_{T_1,...,T_m} sum_j sum_t u_t^2"
+    ],
+    "limitations": [
+      "Computational cost increases with candidate breaks"
+    ],
+    "source_type": "paper",
+    "summary": "Provides estimation/testing for multiple structural breaks with unknown dates; directly applicable to rule/machine transition analysis.",
+    "title": "Estimating and Testing Linear Models with Multiple Structural Changes",
+    "url": "https://doi.org/10.2307/2998540",
+    "year": 1998
+  },
+  {
+    "assumptions": [
+      "Segment-wise parametric structure"
+    ],
+    "authors": [
+      "J. Bai",
+      "P. Perron"
+    ],
+    "citation": "S11",
+    "claims": [
+      "Feasible applied workflow for multiple breaks"
+    ],
+    "conclusions": [
+      "Supports data-driven break selection"
+    ],
+    "contributions": [
+      "Algorithms and tests for break detection"
+    ],
+    "future_work": [
+      "Finite-sample critical-value improvements"
+    ],
+    "key_equations": [
+      "UDmax = max_{m in [1,M]} supF(m|0)",
+      "LWZ(m)=log(hat{sigma}_m^2)+k_m*c_T/T"
+    ],
+    "limitations": [
+      "Requires trimming parameter choices"
+    ],
+    "source_type": "paper",
+    "summary": "Expands practical computation and inference for multiple-break models; useful for robust era splitting prior to hypothesis tests.",
+    "title": "Computation and analysis of multiple structural change models",
+    "url": "https://doi.org/10.1002/jae.659",
+    "year": 2003
+  },
+  {
+    "assumptions": [
+      "Additive segment cost and penalty"
+    ],
+    "authors": [
+      "R. Killick",
+      "P. Fearnhead",
+      "I. A. Eckley"
+    ],
+    "citation": "S12",
+    "claims": [
+      "Substantially faster than naive exact dynamic programming"
+    ],
+    "conclusions": [
+      "Scales well for rolling diagnostics"
+    ],
+    "contributions": [
+      "Exact yet fast changepoint algorithm"
+    ],
+    "future_work": [
+      "Model-specific penalties and online variants"
+    ],
+    "key_equations": [
+      "F(t)=min_{tau<t}{F(tau)+C(y_{tau+1:t})+beta}",
+      "Pruning condition: F(tau)+C(y_{tau+1:s})+K >= F(s)"
+    ],
+    "limitations": [
+      "Penalty calibration controls sensitivity"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces PELT algorithm for exact penalized changepoint detection in near-linear time; crucial for long lottery archives.",
+    "title": "Optimal Detection of Changepoints With a Linear Computational Cost",
+    "url": "https://doi.org/10.1080/01621459.2012.737745",
+    "year": 2012
+  },
+  {
+    "assumptions": [
+      "Segment-wise parametric cost models"
+    ],
+    "authors": [
+      "R. Killick",
+      "I. A. Eckley"
+    ],
+    "citation": "S13",
+    "claims": [
+      "Accessible tooling improves applied changepoint practice"
+    ],
+    "conclusions": [
+      "Software-backed reproducibility is feasible"
+    ],
+    "contributions": [
+      "Reference implementation for multiple CPD algorithms"
+    ],
+    "future_work": [
+      "Extended models and diagnostics"
+    ],
+    "key_equations": [
+      "min_{m,\tau} \\{sum_{j=0}^{m} C(y_{\tau_j+1:\tau_{j+1}}) + beta f(m)\\}"
+    ],
+    "limitations": [
+      "Method performance remains model-dependent"
+    ],
+    "source_type": "paper",
+    "summary": "Operationalizes changepoint methods (including PELT) in reproducible software; relevant for transparent experiment pipelines.",
+    "title": "changepoint: An R Package for Changepoint Analysis",
+    "url": "https://doi.org/10.18637/jss.v058.i03",
+    "year": 2014
+  },
+  {
+    "assumptions": [
+      "Piecewise stationarity/parametric segments depending on method"
+    ],
+    "authors": [
+      "C. Truong",
+      "L. Oudre",
+      "N. Vayatis"
+    ],
+    "citation": "S14",
+    "claims": [
+      "No single CPD method dominates all settings"
+    ],
+    "conclusions": [
+      "Method choice should track signal/noise and cost model"
+    ],
+    "contributions": [
+      "Taxonomy of exact/approximate CPD algorithms"
+    ],
+    "future_work": [
+      "Benchmark standardization"
+    ],
+    "key_equations": [
+      "hat{\\mathcal{T}}=argmin_{\\mathcal{T}} V(\\mathcal{T},y)+pen(\\mathcal{T})"
+    ],
+    "limitations": [
+      "Review scope excludes some online methods"
+    ],
+    "source_type": "paper",
+    "summary": "Systematic review of offline CPD methods and tradeoffs; helps choose robust break-detection families for lottery-bias studies.",
+    "title": "Selective review of offline change point detection methods",
+    "url": "https://doi.org/10.1016/j.sigpro.2019.107299",
+    "year": 2020
+  },
+  {
+    "assumptions": [
+      "Independent or positively dependent tests for exact control"
+    ],
+    "authors": [
+      "Y. Benjamini",
+      "Y. Hochberg"
+    ],
+    "citation": "S15",
+    "claims": [
+      "Higher power than FWER controls in large-scale testing"
+    ],
+    "conclusions": [
+      "Suitable default correction for broad scans"
+    ],
+    "contributions": [
+      "FDR concept and practical step-up algorithm"
+    ],
+    "future_work": [
+      "Dependence-robust variants"
+    ],
+    "key_equations": [
+      "Find k=max\\{i: p_(i) <= (i/m)q\\}; reject H_(1),...,H_(k)"
+    ],
+    "limitations": [
+      "Under arbitrary dependence can be anti-conservative"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces BH procedure controlling FDR, foundational for scanning large combinatorial feature spaces without uncontrolled false positives.",
+    "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+    "url": "https://www.jstor.org/stable/2346101",
+    "year": 1995
+  },
+  {
+    "assumptions": [
+      "Arbitrary dependency structures"
+    ],
+    "authors": [
+      "Y. Benjamini",
+      "D. Yekutieli"
+    ],
+    "citation": "S16",
+    "claims": [
+      "Controls FDR under broad dependence assumptions"
+    ],
+    "conclusions": [
+      "Useful conservative sensitivity check"
+    ],
+    "contributions": [
+      "Dependence-robust FDR control"
+    ],
+    "future_work": [
+      "Adaptive dependence-aware procedures"
+    ],
+    "key_equations": [
+      "q' = q / sum_{i=1}^{m}(1/i)",
+      "Reject if p_(i) <= (i/m) q'"
+    ],
+    "limitations": [
+      "Can be overly conservative"
+    ],
+    "source_type": "paper",
+    "summary": "Extends FDR control to general dependence (BY correction), providing conservative safeguards when lottery features are correlated.",
+    "title": "The control of the false discovery rate in multiple testing under dependency",
+    "url": "https://doi.org/10.1214/aos/1013699998",
+    "year": 2001
+  },
+  {
+    "assumptions": [
+      "Valid p-values; estimable proportion of true nulls"
+    ],
+    "authors": [
+      "J. D. Storey"
+    ],
+    "citation": "S17",
+    "claims": [
+      "Can improve power relative to fixed-threshold BH"
+    ],
+    "conclusions": [
+      "Supports graded evidence ranking"
+    ],
+    "contributions": [
+      "Practical q-value framework"
+    ],
+    "future_work": [
+      "Robust pi0 estimation under dependence"
+    ],
+    "key_equations": [
+      "q(p)=min_{t>=p} \\pi_0 m t / R(t)"
+    ],
+    "limitations": [
+      "pi0 estimation sensitivity"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces q-values and direct FDR estimation via pi0, enabling more powerful large-scale inference pipelines.",
+    "title": "A direct approach to false discovery rates",
+    "url": "https://doi.org/10.1111/1467-9868.00346",
+    "year": 2002
+  },
+  {
+    "assumptions": [
+      "Large-scale hypothesis setting with valid p-values"
+    ],
+    "authors": [
+      "J. D. Storey",
+      "R. Tibshirani"
+    ],
+    "citation": "S18",
+    "claims": [
+      "q-values provide interpretable false-discovery calibration"
+    ],
+    "conclusions": [
+      "Encourages full-spectrum evidence reporting"
+    ],
+    "contributions": [
+      "Applied framework for q-value reporting"
+    ],
+    "future_work": [
+      "Dependence-aware q-value extensions"
+    ],
+    "key_equations": [
+      "pFDR = E(V/R | R>0)",
+      "q_i = min_{t >= p_i} pFDR(t)"
+    ],
+    "limitations": [
+      "Dependence can affect calibration"
+    ],
+    "source_type": "paper",
+    "summary": "Demonstrates q-value methodology at genome scale; transferable to lottery feature scans where hypotheses are numerous.",
+    "title": "Statistical significance for genomewide studies",
+    "url": "https://doi.org/10.1073/pnas.1530509100",
+    "year": 2003
+  },
+  {
+    "assumptions": [
+      "Mixture model for test statistics"
+    ],
+    "authors": [
+      "B. Efron"
+    ],
+    "citation": "S19",
+    "claims": [
+      "Theoretical null can miscalibrate in practice"
+    ],
+    "conclusions": [
+      "Null-model diagnostics are necessary"
+    ],
+    "contributions": [
+      "Empirical-null perspective for large-scale testing"
+    ],
+    "future_work": [
+      "Flexible empirical Bayes null estimation"
+    ],
+    "key_equations": [
+      "fdr(z)=p_0 f_0(z)/f(z)"
+    ],
+    "limitations": [
+      "Modeling assumptions for z-density"
+    ],
+    "source_type": "paper",
+    "summary": "Analyzes empirical-null choices in massive testing, useful when lottery-derived statistics show calibration drift from theoretical nulls.",
+    "title": "Large-Scale Simultaneous Hypothesis Testing: The Choice of a Null Hypothesis",
+    "url": "https://doi.org/10.1198/016214504000000089",
+    "year": 2004
+  },
+  {
+    "assumptions": [
+      "Statistical tests are screening tools, not proof of cryptographic security"
+    ],
+    "authors": [
+      "L. E. Bassham",
+      "A. Rukhin",
+      "J. Soto",
+      "et al."
+    ],
+    "citation": "S20",
+    "claims": [
+      "No finite battery can certify true randomness"
+    ],
+    "conclusions": [
+      "Use batteries as first-stage diagnostics"
+    ],
+    "contributions": [
+      "Standardized multi-test randomness assessment"
+    ],
+    "future_work": [
+      "NIST revision for updated methods"
+    ],
+    "key_equations": [
+      "P-value = igamc(a, x)",
+      "Uniformity test via chi^2 across P-value bins"
+    ],
+    "limitations": [
+      "Not sufficient for security claims"
+    ],
+    "source_type": "paper",
+    "summary": "Reference battery of randomness tests; provides a transferable template for binary-sequence diagnostics derived from lottery encodings.",
+    "title": "A Statistical Test Suite for Random and Pseudorandom Number Generators for Cryptographic Applications",
+    "url": "https://doi.org/10.6028/NIST.SP.800-22r1a",
+    "year": 2010
+  },
+  {
+    "assumptions": [
+      "Generator outputs mapped to U(0,1) under null"
+    ],
+    "authors": [
+      "P. L'Ecuyer",
+      "R. Simard"
+    ],
+    "citation": "S21",
+    "claims": [
+      "Different generators fail different deep tests"
+    ],
+    "conclusions": [
+      "Battery diversity matters"
+    ],
+    "contributions": [
+      "Comprehensive RNG testing library and methodology"
+    ],
+    "future_work": [
+      "Additional tests and modern implementations"
+    ],
+    "key_equations": [
+      "U_i = F(X_i) for uniformization under null"
+    ],
+    "limitations": [
+      "Computationally expensive large batteries"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces TestU01 batteries (SmallCrush/Crush/BigCrush); useful as high-power alternatives when testing transformed lottery sequences.",
+    "title": "TestU01: A C Library for Empirical Testing of Random Number Generators",
+    "url": "https://doi.org/10.1145/1268776.1268777",
+    "year": 2007
+  },
+  {
+    "assumptions": [
+      "Finite-state linear recurrence over F2"
+    ],
+    "authors": [
+      "M. Matsumoto",
+      "T. Nishimura"
+    ],
+    "citation": "S22",
+    "claims": [
+      "Improved quality/speed tradeoff vs earlier generators"
+    ],
+    "conclusions": [
+      "Suitable baseline for simulation studies"
+    ],
+    "contributions": [
+      "Long-period, high-equidistribution PRNG"
+    ],
+    "future_work": [
+      "Variants with better equidistribution/seeding"
+    ],
+    "key_equations": [
+      "x_{k+n}=x_{k+m} \\oplus ((x_k^u | x_{k+1}^l)A)",
+      "y = x \\oplus (x>>u); y = y \\oplus ((y<<s)\\&b) ..."
+    ],
+    "limitations": [
+      "Not cryptographically secure"
+    ],
+    "source_type": "paper",
+    "summary": "Canonical PRNG baseline used in Monte Carlo null simulations for lottery studies.",
+    "title": "Mersenne Twister: A 623-dimensionally equidistributed uniform pseudorandom number generator",
+    "url": "https://doi.org/10.1145/272991.272995",
+    "year": 1998
+  },
+  {
+    "assumptions": [
+      "Linear congruential form"
+    ],
+    "authors": [
+      "G. Marsaglia"
+    ],
+    "citation": "S23",
+    "claims": [
+      "Many LCGs exhibit low-dimensional structure"
+    ],
+    "conclusions": [
+      "RNG selection materially affects inference quality"
+    ],
+    "contributions": [
+      "Geometric diagnosis of RNG lattice artifacts"
+    ],
+    "future_work": [
+      "Generalization to broader generator families"
+    ],
+    "key_equations": [
+      "x_{n+1}=(ax_n+c) mod m"
+    ],
+    "limitations": [
+      "Focuses on LCG class"
+    ],
+    "source_type": "paper",
+    "summary": "Classic spectral warning for linear congruential generators; motivates robust RNG choices for null simulations in lottery analysis.",
+    "title": "Random numbers fall mainly in the planes",
+    "url": "https://doi.org/10.1073/pnas.61.1.25",
+    "year": 1968
+  },
+  {
+    "assumptions": [
+      "Min-entropy estimation and extractor assumptions are valid"
+    ],
+    "authors": [
+      "C. Foreman",
+      "R. Yeung",
+      "F. J. Curchod"
+    ],
+    "citation": "S24",
+    "claims": [
+      "Post-processing can significantly improve test outcomes"
+    ],
+    "conclusions": [
+      "Entropy assumptions should be explicit and conservative"
+    ],
+    "contributions": [
+      "Comparative battery testing + extractor impact analysis"
+    ],
+    "future_work": [
+      "Broader RNG classes and extraction pipelines"
+    ],
+    "key_equations": [
+      "\\hat{h}_{min}=\bar{h}-z_{1-\u0007lpha}s_h",
+      "m_2 \\ge 1.02 - m_1"
+    ],
+    "limitations": [
+      "Extractor performance depends on source assumptions"
+    ],
+    "source_type": "paper",
+    "summary": "Evaluates RNGs with multiple test batteries and studies extractor-based post-processing; directly relevant for robust randomness diagnostics methodology.",
+    "title": "Statistical Testing of Random Number Generators and Their Improvement Using Randomness Extraction",
+    "url": "https://doi.org/10.3390/e26121053",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Asymptotic symmetry of mirror statistics under null"
+    ],
+    "authors": [
+      "C. Dai",
+      "B. Lin",
+      "X. Xing",
+      "J. S. Liu"
+    ],
+    "citation": "S25",
+    "claims": [
+      "Improved finite-sample robustness in GLMs"
+    ],
+    "conclusions": [
+      "Alternative to BH/knockoffs in GLM settings"
+    ],
+    "contributions": [
+      "Scale-free FDR control framework"
+    ],
+    "future_work": [
+      "Extensions to dependent designs"
+    ],
+    "key_equations": [
+      "Mirror statistic T_j = (Z_j^+ - Z_j^-)/\\hat{\\sigma}_j"
+    ],
+    "limitations": [
+      "Asymptotic assumptions in moderate samples"
+    ],
+    "source_type": "paper",
+    "summary": "Develops mirror-statistic approach for FDR control in GLMs; useful for count/binary response models in feature-selection stages.",
+    "title": "A Scale-Free Approach for False Discovery Rate Control in Generalized Linear Models",
+    "url": "https://doi.org/10.1080/01621459.2023.2165930",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Empirical likelihood constraints encode null adequately"
+    ],
+    "authors": [
+      "H. Park",
+      "J. Park"
+    ],
+    "citation": "S26",
+    "claims": [
+      "Better robustness vs strict parametric-null methods"
+    ],
+    "conclusions": [
+      "Useful sensitivity analysis for null misspecification"
+    ],
+    "contributions": [
+      "Robust FDR control with fast algorithm"
+    ],
+    "future_work": [
+      "Broader empirical-null constructions"
+    ],
+    "key_equations": [
+      "\\max \\prod_i p_i \\; s.t. \\sum_i p_i g(X_i,\theta)=0"
+    ],
+    "limitations": [
+      "Constraint design impacts performance"
+    ],
+    "source_type": "paper",
+    "summary": "Proposes empirical-likelihood-based FDR control under non-normal nulls; relevant when lottery feature statistics are non-Gaussian.",
+    "title": "A robust false discovery rate controlling procedure using the empirical likelihood with a fast algorithm",
+    "url": "https://doi.org/10.1080/00949655.2023.2280916",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "State-space imputation reasonably recovers latent process"
+    ],
+    "authors": [
+      "T. T. Haile",
+      "F. Tian",
+      "G. AlNemer",
+      "B. Tian"
+    ],
+    "citation": "S27",
+    "claims": [
+      "Improved changepoint localization with imputation"
+    ],
+    "conclusions": [
+      "Practical for incomplete time series"
+    ],
+    "contributions": [
+      "Missing-data-aware multiscale CPD workflow"
+    ],
+    "future_work": [
+      "Multivariate and online extensions"
+    ],
+    "key_equations": [
+      "X_t = \\sum_{i=1}^p \\phi_i X_{t-i} + \\epsilon_t",
+      "\\hat{\tau}=argmax_{\tau}|T(\tau)|"
+    ],
+    "limitations": [
+      "Dependent on imputation quality"
+    ],
+    "source_type": "paper",
+    "summary": "Combines imputation and multiscale changepoint testing under missingness; relevant if operational metadata gaps are present.",
+    "title": "Multiscale Change Point Detection for Univariate Time Series Data with Missing Value",
+    "url": "https://doi.org/10.3390/math12203189",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Piecewise distributional regimes in multivariate streams"
+    ],
+    "authors": [
+      "T. Si",
+      "Y. Wang",
+      "L. Zhang",
+      "E. Richmond",
+      "T.-H. Ahn",
+      "H. Gong"
+    ],
+    "citation": "S28",
+    "claims": [
+      "Competitive detection accuracy in multivariate settings"
+    ],
+    "conclusions": [
+      "Useful when single-feature scans miss joint shifts"
+    ],
+    "contributions": [
+      "Scaled Bregman divergence for CPD"
+    ],
+    "future_work": [
+      "Large-scale online variants"
+    ],
+    "key_equations": [
+      "D_{\\phi}(x,y)=\\phi(x)-\\phi(y)-\nabla\\phi(y)^T(x-y)"
+    ],
+    "limitations": [
+      "Choice of divergence impacts sensitivity"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces divergence-based multivariate CPD; relevant for joint monitoring of multiple lottery descriptors.",
+    "title": "Multivariate Time Series Change-Point Detection with a Novel Pearson-like Scaled Bregman Divergence",
+    "url": "https://doi.org/10.3390/stats7020028",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Uniform draw null under game rules"
+    ],
+    "authors": [
+      "K. Ungar"
+    ],
+    "citation": "S29",
+    "claims": [
+      "No statistically significant global frequency bias at alpha=0.05"
+    ],
+    "conclusions": [
+      "Observed frequencies broadly consistent with randomness"
+    ],
+    "contributions": [
+      "Recent lottery-specific fairness audit"
+    ],
+    "future_work": [
+      "Regime-wise and dependence-aware diagnostics"
+    ],
+    "key_equations": [
+      "\\chi^2=\\sum_{i=1}^{49}(O_i-E_i)^2/E_i"
+    ],
+    "limitations": [
+      "Focuses on marginal frequencies, limited mechanism variables"
+    ],
+    "source_type": "paper",
+    "summary": "Direct lottery-domain empirical study using chi-square and Monte Carlo on Romanian 6/49 draws; useful external benchmark for effect-size expectations.",
+    "title": "Investigating Randomness and Fairness in the Romanian 6/49 Lottery",
+    "url": "https://doi.org/10.56043/reveco-2025-0002",
+    "year": 2025
+  },
+  {
+    "assumptions": [
+      "Underlying draws follow discrete-uniform sampling without replacement"
+    ],
+    "authors": [
+      "K.-K. Tse"
+    ],
+    "citation": "S30",
+    "claims": [
+      "Order-based views can clarify expected structure"
+    ],
+    "conclusions": [
+      "Useful for constructing interpretable descriptors"
+    ],
+    "contributions": [
+      "Ordered-statistics interpretation for lottery outcomes"
+    ],
+    "future_work": [
+      "Integrate with dependence and regime tests"
+    ],
+    "key_equations": [
+      "X_{(1)} <= X_{(2)} <= ... <= X_{(k)}",
+      "f_{X_{(j)}}(x)=\frac{n!}{(j-1)!(n-j)!}F(x)^{j-1}(1-F(x))^{n-j}f(x)"
+    ],
+    "limitations": [
+      "Limited inferential depth on operational biases"
+    ],
+    "source_type": "paper",
+    "summary": "Applies ordered-statistics framing to lottery numbers; informs rank-based descriptors that are invariant to permutation.",
+    "title": "Lottery Numbers and Ordered Statistics",
+    "url": "https://doi.org/10.4236/am.2024.154017",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Quantum-noise-dominant entropy source after calibration"
+    ],
+    "authors": [
+      "P. R. Smith",
+      "D. G. Marangon",
+      "T. K. Paraiso",
+      "J. F. Dynes",
+      "A. J. Shields"
+    ],
+    "citation": "S31",
+    "claims": [
+      "High throughput with stability under practical noise"
+    ],
+    "conclusions": [
+      "Hardware randomness can be miniaturized at scale"
+    ],
+    "contributions": [
+      "Integrated photonic QRNG design with robust extraction"
+    ],
+    "future_work": [
+      "Tighter electronics-photonics integration"
+    ],
+    "key_equations": [
+      "R = H_{min} * f_{sample}"
+    ],
+    "limitations": [
+      "Device-specific calibration and integration requirements"
+    ],
+    "source_type": "paper",
+    "summary": "Presents high-speed QRNG architecture with built-in noise rejection; useful as modern reference for physical randomness generation constraints.",
+    "title": "Noise-Rejecting Photonic Integrated Circuit for Robust Quantum Random Number Generation",
+    "url": "https://doi.org/10.1364/OPTICAQ.570625",
+    "year": 2025
+  },
+  {
+    "assumptions": [
+      "Regulator-reported figures reflect audited operations"
+    ],
+    "authors": [
+      "UK Gambling Commission"
+    ],
+    "citation": "S32",
+    "claims": [
+      "Publishes annual operational/accountability statements"
+    ],
+    "conclusions": [
+      "Useful governance context for system-level fairness discussions"
+    ],
+    "contributions": [
+      "Recent regulatory context and accountability documentation"
+    ],
+    "future_work": [],
+    "key_equations": [],
+    "limitations": [
+      "Not a dedicated statistical fairness study of draw outcomes"
+    ],
+    "source_type": "paper",
+    "summary": "Regulatory report for UK gambling oversight period 2024-2025; provides governance and operational context for lottery integrity discussions.",
+    "title": "Gambling Commission annual report and accounts 2024 to 2025",
+    "url": "https://www.gov.uk/government/publications/gambling-commission-annual-report-and-accounts-2024-to-2025",
+    "year": 2025
+  },
+  {
+    "assumptions": [
+      "Company disclosures accurately summarize operations"
+    ],
+    "authors": [
+      "Allwyn International"
+    ],
+    "citation": "S33",
+    "claims": [
+      "Reports 2024 revenue/EBITDA and strategy execution"
+    ],
+    "conclusions": [
+      "Provides recent organizational context"
+    ],
+    "contributions": [
+      "Current operator context including digital and operational metrics"
+    ],
+    "future_work": [],
+    "key_equations": [],
+    "limitations": [
+      "Corporate report, not independent statistical audit"
+    ],
+    "source_type": "paper",
+    "summary": "Operator-level annual report covering 2024 financial/operational highlights; useful for current operational context and governance signals.",
+    "title": "Allwyn 2024 Annual Report and Accounts",
+    "url": "https://www.allwyn.com/report/2024",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Published numbers are official and independently audited"
+    ],
+    "authors": [
+      "Multi-State Lottery Association"
+    ],
+    "citation": "S34",
+    "claims": [
+      "Provides official draw/result information"
+    ],
+    "conclusions": [
+      "Supports out-of-sample cross-lottery validation"
+    ],
+    "contributions": [
+      "Canonical operational and results source for Powerball"
+    ],
+    "future_work": [
+      "Automate API/HTML archival ingestion"
+    ],
+    "key_equations": [
+      "P(jackpot)=1/C(69,5)*(1/26)"
+    ],
+    "limitations": [
+      "Web extraction pipeline needed for structured historical table"
+    ],
+    "source_type": "paper",
+    "summary": "Official game-rule and draw-publication source for U.S. Powerball; candidate external dataset for cross-system robustness tests.",
+    "title": "Powerball official game documentation and result publications",
+    "url": "https://www.powerball.com/",
+    "year": 2026
+  },
+  {
+    "assumptions": [
+      "Rule page accurately reflects current format"
+    ],
+    "authors": [
+      "LOTTO.de"
+    ],
+    "citation": "S35",
+    "claims": [
+      "Defines draw mechanism and prize classes"
+    ],
+    "conclusions": [
+      "Supports exact combinatorial nulls for the attached German dataset"
+    ],
+    "contributions": [
+      "Primary rules source for German lottery format"
+    ],
+    "future_work": [
+      "Link with archival procedure documents"
+    ],
+    "key_equations": [
+      "P(6 Richtige)=1/C(49,6)"
+    ],
+    "limitations": [
+      "No historical machine/ball metadata"
+    ],
+    "source_type": "paper",
+    "summary": "Official German 6aus49 rule specification with draw structure and schedules; required for precise null-model formulation for k-of-n + bonus mechanics.",
+    "title": "LOTTO 6aus49 Spielregeln",
+    "url": "https://www.lotto.de/lotto-6aus49/spielregeln",
+    "year": 2026
+  },
+  {
+    "assumptions": [
+      "Draw-history pages are complete and accurate"
+    ],
+    "authors": [
+      "The National Lottery (UK)"
+    ],
+    "citation": "S36",
+    "claims": [
+      "Includes draw machine and ball set identifiers"
+    ],
+    "conclusions": [
+      "Useful external benchmark for mechanism covariates"
+    ],
+    "contributions": [
+      "Provides operational metadata beyond numbers"
+    ],
+    "future_work": [
+      "Use stable host and archival snapshots"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Programmatic fetch intermittently unstable (502 from mirror host)"
+    ],
+    "source_type": "paper",
+    "summary": "Official UK draw-history pages include draw machine and ball set tags, useful for mechanism-specific covariates and change-point annotation.",
+    "title": "The National Lottery Lotto draw details (example draw records)",
+    "url": "https://www.national-lottery.co.uk/results/lotto/draw-history/draw-details/3085",
+    "year": 2025
+  },
+  {
+    "assumptions": [
+      "Library implementations match referenced methods"
+    ],
+    "authors": [
+      "C. Truong and contributors"
+    ],
+    "citation": "S37",
+    "claims": [
+      "Supports modular offline CPD workflows"
+    ],
+    "conclusions": [
+      "High relevance for this project\u2019s regime segmentation"
+    ],
+    "contributions": [
+      "Reusable CPD software stack"
+    ],
+    "future_work": [],
+    "key_equations": [],
+    "limitations": [
+      "Requires careful penalty/model calibration"
+    ],
+    "source_type": "paper",
+    "summary": "Widely used Python CPD toolkit implementing PELT, binary segmentation, and kernel models; strong candidate for reproducible regime-analysis code.",
+    "title": "ruptures: change point detection in Python",
+    "url": "https://github.com/deepcharles/ruptures",
+    "year": 2026
+  },
+  {
+    "assumptions": [
+      "Implementation-level fixes align with documented test definitions"
+    ],
+    "authors": [
+      "arcetri contributors"
+    ],
+    "citation": "S38",
+    "claims": [
+      "Improves usability and performance over legacy STS"
+    ],
+    "conclusions": [
+      "Good candidate for reproducible randomness-test execution"
+    ],
+    "contributions": [
+      "Practical, maintained STS tooling"
+    ],
+    "future_work": [],
+    "key_equations": [],
+    "limitations": [
+      "Still dependent on careful input-bitstream preparation"
+    ],
+    "source_type": "paper",
+    "summary": "Improved open implementation of NIST STS with batch/distributed improvements; useful for reproducible binary-randomness battery testing.",
+    "title": "arcetri/sts: Improved NIST Statistical Test Suite",
+    "url": "https://github.com/arcetri/sts",
+    "year": 2025
+  },
+  {
+    "assumptions": [
+      "Merged source files were transcribed correctly"
+    ],
+    "authors": [
+      "User-provided compiled records"
+    ],
+    "citation": "S39",
+    "claims": [
+      "Contains draw date, six main numbers, bonus and payout fields"
+    ],
+    "conclusions": [
+      "Sufficient temporal depth for rolling/local and global tests"
+    ],
+    "contributions": [
+      "Longitudinal draw corpus for regime and bias testing"
+    ],
+    "future_work": [
+      "Augment with audit/procedure logs"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "No direct ball-mass or operator-level latent variables"
+    ],
+    "source_type": "paper",
+    "summary": "Primary empirical dataset spanning 1986-09-07 to 2026-03-15 with 6-number outcomes, bonus fields, and source provenance; core data for all downstream analyses.",
+    "title": "Historical lotto draws dataset (1986-2026) user-provided attachment",
+    "url": "resource://resources/lotto_draws_1986_2026.txt",
+    "year": 2026
+  }
+]

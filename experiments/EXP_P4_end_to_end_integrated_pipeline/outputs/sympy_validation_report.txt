@@ -1,0 +1,13 @@
+{by_monotone_increment: q/(H_m*m), logistic_second_derivative_identity: 0, not ↪
+
+↪ es: [logistic_second_derivative_identity should simplify to 0., sign-identif ↪
+
+↪ ication equivalence encodes C3 iff condition., BY increment should be positi ↪
+
+↪ ve for q,m,H_m > 0.], sign_identification_equivalence_cnf: ((Abs(Delta) > Ga ↪
+
+↪ mma*Abs(gamma)) | (Delta + Gamma*Abs(gamma) >= 0)) & ((Abs(Delta) > Gamma*Ab ↪
+
+↪ s(gamma)) | (Delta - Gamma*Abs(gamma) <= 0)) & ((Abs(Delta) <= Gamma*Abs(gam ↪
+
+↪ ma)) | (Delta + Gamma*Abs(gamma) < 0) | (Delta - Gamma*Abs(gamma) > 0))}

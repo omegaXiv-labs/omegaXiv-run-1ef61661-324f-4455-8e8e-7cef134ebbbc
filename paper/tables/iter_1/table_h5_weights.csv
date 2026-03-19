@@ -1,0 +1,4 @@
+scheme,w_replication,w_inferential,w_transport,w_runtime
+learned_maxmin,0.25,0.25,0.25,0.25
+fixed_historical,0.35,0.3,0.2,0.15
+equal_weight,0.25,0.25,0.25,0.25

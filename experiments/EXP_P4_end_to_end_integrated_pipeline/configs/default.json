@@ -1,0 +1,33 @@
+{
+  "experiment_id": "EXP_P4_end_to_end_integrated_pipeline",
+  "seeds": [7, 17, 29, 53, 89],
+  "h1": {
+    "L_min_draws": ["26", "52", "78", "104", "156"],
+    "beta": ["0.10", "0.30", "0.60", "1.00"],
+    "lambda_alarm": ["0.00", "0.25", "0.50", "1.00"],
+    "kappa_iid": ["0.00", "0.25", "0.75", "1.50"],
+    "max_candidates": 400
+  },
+  "h2": {
+    "q_target": ["0.01", "0.03", "0.05", "0.10"],
+    "rho0_min_replication": ["0.50", "0.60", "0.70", "0.80"],
+    "isotonic_envelope": ["off", "on"],
+    "fdr_estimator": ["BH", "BY", "Storey", "RobustEL"]
+  },
+  "h3": {
+    "Gamma": ["0.00", "0.25", "0.50", "0.75", "1.00", "1.50"],
+    "gamma_bound_source": ["proxy_envelope", "percentile_cap", "stress_multiplier"]
+  },
+  "h4": {
+    "lambda_l1": ["0.001", "0.005", "0.010", "0.050"],
+    "eta_fused": ["0.000", "0.050", "0.100", "0.200"],
+    "delta_NI": ["0.00", "0.01", "0.02"],
+    "delta_SUP": ["0.01", "0.02"]
+  },
+  "h5": {
+    "bootstrap_reps": ["500", "1000", "2000"],
+    "fdr_floor_c1": ["0.01", "0.03", "0.05"],
+    "sign_floor_c2": ["5", "10", "15"],
+    "weight_regularizer": ["none", "entropy_0.01", "l2_0.01"]
+  }
+}

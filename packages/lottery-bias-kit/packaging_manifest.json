@@ -1,0 +1,91 @@
+{
+  "handle": "lottery-bias-kit",
+  "distribution_name": "omegaxiv-lottery-bias-kit",
+  "import_name": "lottery_bias_kit",
+  "version": "0.1.0",
+  "package_type": "library",
+  "handle_confirmed": true,
+  "summary": "Reusable library exposing regime segmentation, replication-constrained FDR analysis, bounded-confounding sign identification, and fused-transfer scoring.",
+  "registry": {
+    "index_path": "packages/registry/index.json",
+    "record_path": "packages/registry/lottery-bias-kit.json"
+  },
+  "paths": {
+    "readme": "packages/lottery-bias-kit/README.md",
+    "requirements": "packages/lottery-bias-kit/requirements.txt",
+    "dependency_graph": "packages/lottery-bias-kit/dependency_graph.json"
+  },
+  "install": {
+    "canonical": [
+      "pip install omegaxiv",
+      "ox install lottery-bias-kit==0.1.0"
+    ],
+    "install_target": "packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl",
+    "smoke_test_command": "python -m venv /tmp/ox_smoke_lottery_bias_kit && /tmp/ox_smoke_lottery_bias_kit/bin/python -m pip install packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl && /tmp/ox_smoke_lottery_bias_kit/bin/python -c \"from lottery_bias_kit import LotteryBiasAnalyzer\""
+  },
+  "extraction_plan": {
+    "core_contributions": [
+      "Regime segmentation and changepoint consensus pipeline (H1/C1)",
+      "Replication-constrained FDR operating-point search (H2/C2)",
+      "Partial-identification sign robustness under bounded confounding (H3/C3)",
+      "Fused transfer model and integrated reproducibility score computation (H4/P4/C4)"
+    ],
+    "source_symbols": [
+      {
+        "source_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/src/lottery_validation/analysis.py",
+        "symbols": [
+          "run_h1_segmentation",
+          "run_h2_fdr",
+          "run_h3_identification",
+          "run_h4_transfer",
+          "run_p4_integrated"
+        ]
+      },
+      {
+        "source_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/src/lottery_validation/core.py",
+        "symbols": [
+          "load_draws",
+          "add_descriptors",
+          "temporal_split",
+          "feasible_changepoints",
+          "assign_regime_ids"
+        ]
+      }
+    ],
+    "public_api_mapping": [
+      {
+        "exported_module": "lottery_bias_kit.analysis",
+        "exported_symbol": "LotteryBiasAnalyzer",
+        "maps_from": [
+          "run_h1_segmentation",
+          "run_h2_fdr",
+          "run_h3_identification",
+          "run_h4_transfer",
+          "run_p4_integrated"
+        ]
+      },
+      {
+        "exported_module": "lottery_bias_kit.data",
+        "exported_symbol": "load_lottery_draws",
+        "maps_from": ["load_draws"]
+      },
+      {
+        "exported_module": "lottery_bias_kit.data",
+        "exported_symbol": "prepare_lottery_dataframe",
+        "maps_from": ["add_descriptors"]
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "kind": "wheel",
+      "path": "packages/lottery-bias-kit/dist/omegaxiv_lottery_bias_kit-0.1.0-py3-none-any.whl",
+      "sha256": "e23579a4a2873da0eb2ca58aba7c2fd8d127c7fc6a2f06403299350e21f7fb92"
+    },
+    {
+      "kind": "archive",
+      "path": "packages/lottery-bias-kit/dist/lottery-bias-kit-0.1.0-source.tar.gz",
+      "sha256": "b1e69e27eb69c9d7d0cf493523727769ee76ae449c50c8eb9f6027ffb1c03cfe"
+    }
+  ]
+}

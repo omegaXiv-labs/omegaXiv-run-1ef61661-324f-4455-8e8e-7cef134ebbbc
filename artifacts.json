@@ -1,0 +1,21 @@
+{
+  "artifacts": [],
+  "code": [
+    "code/run_experiments.py",
+    "code/__init__.py",
+    "code/io_utils.py",
+    "code/core.py",
+    "code/analysis.py",
+    "code/plotting.py",
+    "code/sympy_checks.py"
+  ],
+  "experiments": "experiments",
+  "knowledge": "knowledge",
+  "latex_sources": "paper/main.tex",
+  "paper_data": "paper/data",
+  "paper_figures": "paper/figures",
+  "paper_pdf": "paper/main.pdf",
+  "paper_tables": "paper/tables",
+  "paper_thumbnail": "paper/thumbnail.png",
+  "sources": "sources/sources.json"
+}

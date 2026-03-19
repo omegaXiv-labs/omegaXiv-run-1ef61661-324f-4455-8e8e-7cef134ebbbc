@@ -1,0 +1,7 @@
+method,composite_reproducibility_score
+P4_staged_integrated,0.531926583314633
+P1_regime_first_inference_core,0.12
+P2_replication_constrained_fdr,0.71875
+P3_partial_identification_robustness,0.8
+unconstrained_end_to_end_predictive_pipeline,0.15129958323983156
+global_null_screen_only,0.25

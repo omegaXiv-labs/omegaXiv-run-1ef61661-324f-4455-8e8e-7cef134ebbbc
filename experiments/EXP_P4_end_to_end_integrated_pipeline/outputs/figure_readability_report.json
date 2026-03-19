@@ -1,0 +1,36 @@
+{
+  "figure_checks": [
+    {
+      "png_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/outputs/figure_checks/fig_validation_h1_h2.png",
+      "width": 1800,
+      "height": 1200,
+      "mean_luma": 241.39118101851852,
+      "std_luma": 37.2604125405037,
+      "readability_check": true
+    },
+    {
+      "png_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/outputs/figure_checks/fig_validation_h3.png",
+      "width": 1800,
+      "height": 675,
+      "mean_luma": 217.1917596707819,
+      "std_luma": 68.38454438947613,
+      "readability_check": true
+    },
+    {
+      "png_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/outputs/figure_checks/fig_validation_h4.png",
+      "width": 1800,
+      "height": 1200,
+      "mean_luma": 231.74341574074074,
+      "std_luma": 57.07932293843802,
+      "readability_check": true
+    },
+    {
+      "png_path": "experiments/EXP_P4_end_to_end_integrated_pipeline/outputs/figure_checks/fig_validation_p4.png",
+      "width": 1800,
+      "height": 675,
+      "mean_luma": 236.91143374485597,
+      "std_luma": 52.01226258991387,
+      "readability_check": true
+    }
+  ]
+}

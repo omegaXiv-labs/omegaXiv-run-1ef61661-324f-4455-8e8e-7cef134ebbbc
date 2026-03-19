@@ -1,0 +1,41 @@
+{
+  "artifacts": [],
+  "code": [
+    "code/run_experiments.py",
+    "code/__init__.py",
+    "code/io_utils.py",
+    "code/core.py",
+    "code/analysis.py",
+    "code/plotting.py",
+    "code/sympy_checks.py"
+  ],
+  "created_at": "2026-03-17T09:40:21.667123+00:00",
+  "paper": {
+    "bibtex": "paper/references.bib",
+    "latex": "paper/main.tex",
+    "pdf": "paper/main.pdf",
+    "thumbnail": "paper/thumbnail.png"
+  },
+  "phases": [
+    "derive_math_methodology",
+    "hypothesis_methodology",
+    "insights_refinement",
+    "knowledge_acquisition",
+    "knowledge_distillation",
+    "packaging_release",
+    "review_feedback",
+    "user_input",
+    "user_presentation",
+    "validation_simulation",
+    "writing_presentation"
+  ],
+  "session_id": "1ef61661-324f-4455-8e8e-7cef134ebbbc",
+  "sources": "sources/sources.json",
+  "workspace": {
+    "experiments": "experiments",
+    "knowledge": "knowledge",
+    "paper_data": "paper/data",
+    "paper_figures": "paper/figures",
+    "paper_tables": "paper/tables"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "exists": true,
+      "exit_code": 0,
+      "pdf": "/app/outputs/runs/1ef61661-324f-4455-8e8e-7cef134ebbbc/workspace/paper/figures/iter_1/fig_validation_h1_h2.pdf",
+      "png": "/app/outputs/runs/1ef61661-324f-4455-8e8e-7cef134ebbbc/workspace/experiments/EXP_P4_end_to_end_integrated_pipeline/iter_1/figure_checks/fig_validation_h1_h2.png",
+      "stderr": ""
+    },
+    {
+      "exists": true,
+      "exit_code": 0,
+      "pdf": "/app/outputs/runs/1ef61661-324f-4455-8e8e-7cef134ebbbc/workspace/paper/figures/iter_1/fig_validation_h3.pdf",
+      "png": "/app/outputs/runs/1ef61661-324f-4455-8e8e-7cef134ebbbc/workspace/experiments/EXP_P4_end_to_end_integrated_pipeline/iter_1/figure_checks/fig_validation_h3.png",
+      "stderr": ""
+    },
+    {
+      "exists": true,
+      "exit_code": 0,
+      "pdf": "/app/outputs/runs/1ef61661-324f-4455-8e8e-7cef134ebbbc/workspace/paper/figures/iter_1/fig_validation_h4.pdf",
+      "png": "/app/outputs/runs/1ef61661-324f-4455-8e8e-7cef134ebbbc/workspace/experiments/EXP_P4_end_to_end_integrated_pipeline/iter_1/figure_checks/fig_validation_h4.png",
+      "stderr": ""
+    },
+    {
+      "exists": true,
+      "exit_code": 0,
+      "pdf": "/app/outputs/runs/1ef61661-324f-4455-8e8e-7cef134ebbbc/workspace/paper/figures/iter_1/fig_validation_p4.pdf",
+      "png": "/app/outputs/runs/1ef61661-324f-4455-8e8e-7cef134ebbbc/workspace/experiments/EXP_P4_end_to_end_integrated_pipeline/iter_1/figure_checks/fig_validation_p4.png",
+      "stderr": ""
+    }
+  ]
+}
